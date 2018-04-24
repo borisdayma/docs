@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.wandb.com/docs/blog</id>
-    <title>docs Blog</title>
+    <title>wandb Blog</title>
     <updated>2017-10-24T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://docs.wandb.com/docs/blog"/>
-    <subtitle>The best place to stay up-to-date with the latest docs news and events.</subtitle>
+    <subtitle>The best place to stay up-to-date with the latest wandb news and events.</subtitle>
     <logo>https://docs.wandb.com/docs/img/wandb.svg</logo>
     <rights>Copyright © 2018 Weights &amp; Biases, Inc.</rights>
     <entry>

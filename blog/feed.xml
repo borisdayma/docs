@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>docs Blog</title>
+        <title>wandb Blog</title>
         <link>https://docs.wandb.com/docs/blog</link>
-        <description>The best place to stay up-to-date with the latest docs news and events.</description>
+        <description>The best place to stay up-to-date with the latest wandb news and events.</description>
         <lastBuildDate>Tue, 24 Oct 2017 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
-            <title>docs Blog</title>
+            <title>wandb Blog</title>
             <url>https://docs.wandb.com/docs/img/wandb.svg</url>
             <link>https://docs.wandb.com/docs/blog</link>
         </image>
