@@ -1,0 +1,67 @@
+/* your custom css */
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (min-width: 1500px) {
+}
+
+@font-face {
+    font-family: 'graphein';
+    src: url(../fonts/grapheinpro-book-webfont.woff) format('woff');
+}
+  
+@font-face {
+    font-family: 'graphein';
+    src: url(../fonts/grapheinpro-bold-webfont.woff) format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'graphein';
+    src: url(../fonts/grapheinpro-bolditalic-webfont.woff) format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'graphein';
+    src: url(../fonts/grapheinpro-italic-webfont.woff) format('woff');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'graphein';
+    src: url(../fonts/grapheinpro-light-webfont.woff) format('woff');
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'graphein';
+    src: url(../fonts/grapheinpro-lightitalic-webfont.woff) format('woff');
+    font-weight: lighter;
+    font-style: italic;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'graphein';
+}
+
+.fixedHeaderContainer {
+    padding: 0px;
+}
+
+.fixedHeaderContainer a {
+    height: 50px;
+}

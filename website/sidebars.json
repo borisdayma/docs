@@ -1,0 +1,11 @@
+{
+  "docs": {
+    "Getting Started": ["started"],
+    "Python Library": ["configs", "logs", "saving", "keras"],
+    "Command Line": ["cli", "restoring"],
+    "Sweeps": ["sweep"],
+    "Automated Environments": ["automated"]
+
+  }
+
+}
