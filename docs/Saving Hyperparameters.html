@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Saving Hyperparameters · docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Saving Hyperparameters · docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.wandb.com/index.html"/><meta property="og:description" content="# Tracking Models"/><meta property="og:image" content="https://docs.wandb.com/img/wandb.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.wandb.com/img/wandb.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/wandb.svg" alt="docs"/><h2 class="headerTitle">docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Saving Hyperparameters</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="tracking-models"></a><a href="#tracking-models" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tracking Models</h1>
+<h2><a class="anchor" aria-hidden="true" id="configurations"></a><a href="#configurations" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configurations</h2>
+<p><img src="configuration.png" alt="History"></p>
+<pre><code class="hljs css python--tensorflow"><span class="hljs-keyword">run</span><span class="bash"> = wandb.init()
+</span><span class="hljs-keyword">run</span>.<span class="bash">config.epochs = 4   <span class="hljs-comment"># config variables are saved to the cloud</span>
+</span>
+flags = tf.app.flags
+flags.DEFINE_string(<span class="hljs-string">'data_dir'</span>, <span class="hljs-string">'/tmp/data'</span>)
+flags.DEFINE_integer(<span class="hljs-string">'batch_size'</span>, <span class="hljs-number">128</span>, <span class="hljs-string">'Batch size.'</span>)
+<span class="hljs-keyword">run</span>.<span class="bash">config.update(flags.FLAGS)  <span class="hljs-comment"># adds all of the tensorflow flags as config variables</span>
+</span></code></pre>
+<pre><code class="hljs css python--keras"><span class="hljs-keyword">run</span><span class="bash"> = wandb.init()
+</span><span class="hljs-keyword">run</span>.<span class="bash">config.epochs = 4   <span class="hljs-comment"># config variables are saved to the cloud</span>
+</span>
+parser = argparse.ArgumentParser()
+parser.add_argument(<span class="hljs-string">'--batch-size'</span>, type=int, default=<span class="hljs-number">8</span>, metavar=<span class="hljs-string">'N'</span>,
+                     help=<span class="hljs-string">'input batch size for training (default: 8)'</span>)
+<span class="hljs-keyword">run</span>.<span class="bash">config.update(args) <span class="hljs-comment"># adds all of the arguments as config variables</span>
+</span></code></pre>
+<pre><code class="hljs css python--pytorch"><span class="hljs-keyword">run</span><span class="bash"> = wandb.init()
+</span><span class="hljs-keyword">run</span>.<span class="bash">config.epochs = 4   <span class="hljs-comment"># config variables are saved to the cloud</span>
+</span>
+parser = argparse.ArgumentParser()
+parser.add_argument(<span class="hljs-string">'--batch-size'</span>, type=int, default=<span class="hljs-number">8</span>, metavar=<span class="hljs-string">'N'</span>,
+                     help=<span class="hljs-string">'input batch size for training (default: 8)'</span>)
+<span class="hljs-keyword">run</span>.<span class="bash">config.update(args) <span class="hljs-comment"># adds all of the arguments as config variables</span>
+</span></code></pre>
+<p>Configurations is a way of automatically tracking the hyperparameters you used
+to build your model.</p>
+<p>You can set the configuration values directly and access them as ordinary variables, or
+you can import variables from tensorflow flags or argparse objects to integrate
+with pre-existing code.</p>
+<h3><a class="anchor" aria-hidden="true" id="file-based-configs"></a><a href="#file-based-configs" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>File-Based Configs</h3>
+<blockquote>
+<p>(Optional) Create a config-defaults file to automatically load hyperparameters
+into the config variable.</p>
+</blockquote>
+<pre><code class="hljs css yaml"><span class="hljs-comment"># sample config-defaults file</span>
+<span class="hljs-attr">epochs:</span>
+<span class="hljs-attr">  desc:</span> <span class="hljs-string">Number</span> <span class="hljs-string">of</span> <span class="hljs-string">epochs</span> <span class="hljs-string">to</span> <span class="hljs-string">train</span> <span class="hljs-string">over</span>
+<span class="hljs-attr">  value:</span> <span class="hljs-number">100</span>
+<span class="hljs-attr">batch_size:</span>
+<span class="hljs-attr">  desc:</span> <span class="hljs-string">Size</span> <span class="hljs-string">of</span> <span class="hljs-string">each</span> <span class="hljs-string">mini-batch</span>
+<span class="hljs-attr">  value:</span> <span class="hljs-number">32</span>
+</code></pre>
+<p>You can create a file called config-defaults.yaml and it will automatically
+be loaded into the config variable.</p>
+<p>You can tell wandb to load different config files with the argument <code>--configs special-configs.yaml</code> which will load parameters from the file special-configs.yaml.</p>
+<blockquote>
+<p>Automatically load the yaml file into the config object</p>
+</blockquote>
+<pre><code class="hljs css shell">wandb run train.py
+</code></pre>
+<blockquote>
+<p>Change the config file used to load the config object</p>
+</blockquote>
+<pre><code class="hljs css shell">wandb run --configs special-configs.yaml
+</code></pre>
+<blockquote>
+<p>Mutiple config files are allowed</p>
+</blockquote>
+<pre><code class="hljs css shell">wandb run --configs special-configs.yaml,extra-configs.yaml
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="history"></a><a href="#history" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>History</h2>
+<p><img src="history.png" alt="History"></p>
+<pre><code class="hljs css python--tensorflow"><span class="hljs-keyword">run</span><span class="bash"> = wandb.init(config=flags.FLAGS)
+</span>
+<span class="hljs-comment"># Start training</span>
+with tf.Session() as sess:
+  sess.run(init)
+
+  for step in range(<span class="hljs-number">1</span>, <span class="hljs-keyword">run</span>.<span class="bash">config.num_steps+1):
+</span>      batch_x, batch_y = mnist.train.next_batch(<span class="hljs-keyword">run</span>.<span class="bash">config.batch_size)
+</span>      <span class="hljs-comment"># Run optimization op (backprop)</span>
+      sess.run(train_op, feed_dict={X: batch_x, Y: batch_y})
+      <span class="hljs-comment"># Calculate batch loss and accuracy</span>
+      loss, acc = sess.run([loss_op, accuracy], feed_dict={X: batch_x, Y: batch_y})
+
+      <span class="hljs-keyword">run</span>.<span class="bash">history.add({<span class="hljs-string">'acc'</span>: acc, <span class="hljs-string">'loss'</span>:loss})   <span class="hljs-comment"># log accuracy and loss</span>
+</span></code></pre>
+<pre><code class="hljs css python--keras"><span class="hljs-keyword">run</span><span class="bash"> = wandb.init(config=args)
+</span>
+def keras_log(epoch, logs):
+  <span class="hljs-keyword">run</span>.<span class="bash">history.add({<span class="hljs-string">'loss'</span>: logs[<span class="hljs-string">'loss'</span>], <span class="hljs-string">'acc'</span>: logs[<span class="hljs-string">'acc'</span>]})
+</span>  <span class="hljs-keyword">run</span>.<span class="bash">summary[<span class="hljs-string">'acc'</span>] = logs[<span class="hljs-string">'acc'</span>]
+</span>
+model.fit(train, labels, callbacks=[LambdaCallback(keras_log)])
+</code></pre>
+<pre><code class="hljs css python--pytorch"><span class="hljs-keyword">run</span> = wandb.init(config=<span class="hljs-keyword">args</span>)
+
+<span class="hljs-keyword">for</span> epoch <span class="hljs-keyword">in</span> <span class="hljs-keyword">range</span>(1, <span class="hljs-keyword">args</span>.epochs + 1):
+  train_loss = train(epoch)
+  test_loss, test_accuracy = <span class="hljs-keyword">test</span>()
+
+  torch.<span class="hljs-keyword">save</span>(model.state_dict(), 'model')
+
+  <span class="hljs-keyword">run</span>.history.add({<span class="hljs-string">"loss"</span>: train_loss, <span class="hljs-string">"val_loss"</span>: test_loss})
+</code></pre>
+<p>The history object is used to track metrics that change as the model trains.  You can access
+a mutable dictionary of metrics via <code>run.history.row</code>.  The row will be saved and a new row created when
+<code>run.history.add</code> is called.  For simplicity, you can call run.history.add and pass in a dictionary of all the metrics you would like to save.</p>
+<h3><a class="anchor" aria-hidden="true" id="context-manager"></a><a href="#context-manager" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Context Manager</h3>
+<p>We provide a context manager that automatically calls <code>add</code>
+and accepts an optional boolean to help keep nested code clean.</p>
+<blockquote>
+<p>Context manager</p>
+</blockquote>
+<pre><code class="hljs css python"><span class="hljs-keyword">with</span> run.history.step(batch_idx % log_interval == <span class="hljs-number">0</span>):
+  run.history.row.update({<span class="hljs-string">"metric"</span>: <span class="hljs-number">1</span>})
+  <span class="hljs-keyword">if</span> run.history.compute:
+    <span class="hljs-comment"># Something expensive here</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="media"></a><a href="#media" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Media</h2>
+<pre><code class="hljs css python">run.history.row[<span class="hljs-string">"examples"</span>] = [wandb.Image(numpy_array_or_pil, caption=<span class="hljs-string">"Label"</span>)]
+run.history.add()
+</code></pre>
+<p>The history object also accepts rich media.  Currently only images are supported.  Media is added
+by supplying a list of wandb media objects.</p>
+<p>If a numpy array is supplied we assume it's gray scale if the last dimension is 1, RGB if it's 3,
+and RGBA if it's 4.  If the array contains floats we convert them to ints between 0 and 255.<br>
+You can specify a <a href="https://pillow.readthedocs.io/en/3.1.x/handbook/concepts.html#concept-modes">mode</a>
+manually or just supply a <code>PIL.Image</code>.  We recommend you don't add more than 20-50 images per step.</p>
+<h2><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h2>
+<p><img src="summary.png" alt="Summary"></p>
+<pre><code class="hljs css python">run = wandb.init(config=args)
+
+<span class="hljs-keyword">for</span> epoch <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, args.epochs + <span class="hljs-number">1</span>):
+  test_loss, test_accuracy = test()
+  run.summary[<span class="hljs-string">"accuracy"</span>] = test_accuracy
+</code></pre>
+<p>The summary statistics are used to track single metrics per model.  If a summary
+metric is modified, only the updated state is saved.  We automatically set summary to the last
+history row added unless you modify it manually.</p>
+<h2><a class="anchor" aria-hidden="true" id="keras-callback"></a><a href="#keras-callback" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Keras Callback</h2>
+<blockquote>
+<p>Simpler way to track metrics in keras using wandb.callbacks.Keras</p>
+</blockquote>
+<pre><code class="hljs css python"><span class="hljs-keyword">import</span> wandb
+run = wandb.init()
+
+model.fit(X_train, y_train,  validation_data=(X_test, y_test),
+          callbacks=[wandb.callbacks.Keras()])
+</code></pre>
+<p>If you are using keras, you can use the Keras callback to automatically save
+all the metrics and the loss values tracked in <code>model.fit</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="saving-models"></a><a href="#saving-models" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Saving Models</h2>
+<p><img src="saved.png" alt="Saved"></p>
+<pre><code class="hljs css python--keras">import wandb
+<span class="hljs-keyword">run</span><span class="bash"> = wandb.init()
+</span>
+model.fit(X_train, y_train,  validation_data=(X_test, y_test),
+    callbacks=[wandb.callbacks.Keras()])
+model.save(os.path.join(<span class="hljs-keyword">run</span>.<span class="bash">dir, <span class="hljs-string">"model.h5"</span>)) <span class="hljs-comment">#</span>
+</span></code></pre>
+<p>Wandb will save to the cloud any files put in wandb's run directory.</p>
+<p>Wandb's run directories are inside the wandb directory and the path looks like <em>run-20171023_105053-3o4933r0</em> where <em>20171023_105053</em> is the timestamp and <em>3o4933r0</em> is the ID of the run.</p>
+<h2><a class="anchor" aria-hidden="true" id="restoring-code-state"></a><a href="#restoring-code-state" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Restoring Code State</h2>
+<pre><code class="hljs"><span class="hljs-comment"># creates a branch and restores the code to the state it was in when run $RUN_ID was executed</span>
+<span class="hljs-attribute">wandb</span> restore <span class="hljs-variable">$RUN_ID</span>
+</code></pre>
+<p>When <code>wandb.init</code> is called from your script, a link is saved to the last git commit if the code
+is in a git repository.  A diff patch is also created in case there are uncommitted changes or changes
+that are out of sync with your remote.</p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#configurations">Configurations</a><ul class="toc-headings"><li><a href="#file-based-configs">File-Based Configs</a></li></ul></li><li><a href="#history">History</a><ul class="toc-headings"><li><a href="#context-manager">Context Manager</a></li></ul></li><li><a href="#media">Media</a></li><li><a href="#summary">Summary</a></li><li><a href="#keras-callback">Keras Callback</a></li><li><a href="#saving-models">Saving Models</a></li><li><a href="#restoring-code-state">Restoring Code State</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wandb.svg" alt="docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2018 Weights &amp; Biases, Inc.</section></footer></div></body></html>
