@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "Documentation for wandb",
+    "tagline": "Documentation, Guides and Examples",
     "automated": "Running in Automated Environments",
     "Automated Environments": "Automated Environments",
     "board": "Docusaurus",
@@ -28,7 +28,8 @@
     "Hyperparameter Sweeps": "Hyperparameter Sweeps",
     "Python Library": "Python Library",
     "Command Line": "Command Line",
-    "Sweeps": "Sweeps"
+    "Sweeps": "Sweeps",
+    "Examples": "Examples"
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",

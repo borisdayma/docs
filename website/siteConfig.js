@@ -25,10 +25,10 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'docs' /* title for your website */,
-  tagline: 'Documentation for wandb',
+  title: 'wandb' /* title for your website */,
+  tagline: 'Documentation, Guides and Examples',
   url: 'https://docs.wandb.com' /* your website url */,
-  baseUrl: '/' /* base url for your project */,
+  baseUrl: '/docs/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',

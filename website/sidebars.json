@@ -4,8 +4,8 @@
     "Python Library": ["configs", "logs", "saving", "keras"],
     "Command Line": ["cli", "restoring"],
     "Sweeps": ["sweep"],
-    "Automated Environments": ["automated"]
-
+    "Automated Environments": ["automated"],
+    "Examples": ["examples"]
   }
 
 }
