@@ -25,7 +25,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'wandb' /* title for your website */,
+  title: '' /* title for your website */,
   tagline: 'Documentation, Guides and Examples',
   url: 'https://docs.wandb.com' /* your website url */,
   baseUrl: '/docs/' /* base url for your project */,
@@ -35,7 +35,7 @@ const siteConfig = {
 
   // Used for publishing and more
   projectName: 'docs',
-  organizationName: 'wandb',
+  organizationName: 'Weights & Biases',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
@@ -58,8 +58,8 @@ const siteConfig = {
 
   /* colors for website */
   colors: {
-    primaryColor: '#007faf',
-    secondaryColor: '#7a7b7e',
+    primaryColor: '#55565B',
+    secondaryColor: '#ECBB33',
   },
 
   

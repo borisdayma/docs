@@ -1,11 +1,11 @@
 ---
-title: Sweeps
-sidebar_label: Hyperparameter Sweeps
+title: Sweeps *invite only*
+sidebar_label: Hyperparameter Sweeps *invite only*
 ---
 
 ## Overview
 
-Wandb supports running hyperparameter sweeps to find the best set of hyperparameters efficiently.
+W&B supports running hyperparameter sweeps to find the best set of hyperparameters efficiently.
 
 ### Getting Started
 

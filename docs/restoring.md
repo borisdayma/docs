@@ -5,7 +5,7 @@ sidebar_label: Restoring State
 
 ## Overview
 
-You can use wandb to restore your code to the state is was when any particular experiment was run.
+You can use **wandb** to restore your code to the state is was when any particular experiment was run.
 
 ### Example
 

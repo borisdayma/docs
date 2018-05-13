@@ -87,6 +87,7 @@ wandb run --configs special-configs.yaml,extra-configs.yaml
 ## History
 ![History](history.png)
 
+### Tensorflow
 ```python--tensorflow
 run = wandb.init(config=flags.FLAGS)
 
@@ -104,6 +105,7 @@ with tf.Session() as sess:
       run.history.add({'acc': acc, 'loss':loss})   # log accuracy and loss
 ```
 
+### Keras
 ```python--keras
 run = wandb.init(config=args)
 
@@ -114,6 +116,7 @@ def keras_log(epoch, logs):
 model.fit(train, labels, callbacks=[LambdaCallback(keras_log)])
 ```
 
+### PyTorch
 ```python--pytorch
 run = wandb.init(config=args)
 
@@ -204,9 +207,9 @@ model.fit(X_train, y_train,  validation_data=(X_test, y_test),
 model.save(os.path.join(run.dir, "model.h5")) #
 ```
 
-Wandb will save to the cloud any files put in wandb's run directory.
+W&B will save to the cloud any files put in a run's directory.
 
-Wandb's run directories are inside the wandb directory and the path looks like _run-20171023_105053-3o4933r0_ where _20171023_105053_ is the timestamp and _3o4933r0_ is the ID of the run.
+W&B's run directories are inside the *wandb* directory and the path looks like _run-20171023_105053-3o4933r0_ where _20171023_105053_ is the timestamp and _3o4933r0_ is the ID of the run.
 
 ## Restoring Code State
 
