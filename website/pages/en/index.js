@@ -78,6 +78,7 @@ class HomeSplash extends React.Component {
       <SplashContainer>
         <div className="inner">
           <ProjectTitle />
+          <img style={{maxWidth: 800}} src={pageUrl("/img/teaser.png")} />
           <PromoSection>
             <Button href={docUrl('started.html', language)}>Getting Started</Button>
             <Button href={docUrl('examples.html', language)}>Example Projects</Button>

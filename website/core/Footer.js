@@ -10,7 +10,8 @@ const React = require('react');
 class Footer extends React.Component {
   docUrl(doc, language) {
     const baseUrl = this.props.config.baseUrl;
-    return baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
+    //TODO: no language
+    return baseUrl + 'docs/' + doc;
   }
 
   pageUrl(doc, language) {
@@ -41,14 +42,14 @@ class Footer extends React.Component {
             <a href={this.docUrl('configs.html', this.props.language)}>
               Python API Reference
             </a>
-            <a href={this.docUrl('cli.html', this.props.language)}>
+            <a href={this.docUrl('examples.html', this.props.language)}>
               Example Projects
             </a>
           </div>
           <div>
             <h5>More</h5>
             <a href="https://github.com/wandb/client">GitHub</a>
-
+            <a href="https://wandb.com">W&B</a>
           </div>
         </section>
 

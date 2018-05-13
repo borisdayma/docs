@@ -3,8 +3,8 @@
     "Getting Started": ["started"],
     "Python Library": ["configs", "logs", "saving", "keras"],
     "Command Line": ["cli", "restoring"],
+    "Automated Environments": ["automated", "security", "limits"],
     "Sweeps": ["sweep"],
-    "Automated Environments": ["automated"],
     "Examples": ["examples"]
   }
 

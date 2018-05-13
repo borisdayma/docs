@@ -1,6 +1,6 @@
 ---
 title: Running in Automated Environments
-sidebar_label: Automated Environments
+sidebar_label: Environment Variables
 ---
 
 When you are running your script in an automated environment, you can control **wandb** with environment variables set before the script runs or within the script.

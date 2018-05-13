@@ -96,8 +96,8 @@ for epoch in range(1, args.epochs + 1):
 
 ### Context Manager
 
-We provide a context manager that automatically calls `add`
-and accepts an optional boolean to help keep nested code clean.
+We provide a context manager via the `step` method that automatically calls `add`
+and accepts a boolean to help keep nested code clean.  You can check the boolean expression  by accessing `run.history.compute`.
 
 ```python
 with run.history.step(batch_idx % log_interval == 0):

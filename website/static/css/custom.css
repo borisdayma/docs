@@ -2,6 +2,14 @@
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
+@media only screen and (max-width: 736px) {
+    .separateOnPageNav .navPusher {
+        padding-top: 50px;
+    }
+    .docsNavContainer nav.toc .navBreadcrumb {
+        background: #f9f9f9;
+    }
+}
 
 @media only screen and (min-width: 1024px) {
 }
@@ -64,4 +72,12 @@ body {
 
 .fixedHeaderContainer a {
     height: 50px;
+}
+
+.navPusher {
+    padding-top: 25px;
+}
+
+nav.toc {
+    position: fixed;
 }

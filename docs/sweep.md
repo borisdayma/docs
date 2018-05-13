@@ -1,6 +1,6 @@
 ---
-title: Sweeps *invite only*
-sidebar_label: Hyperparameter Sweeps *invite only*
+title: Sweeps (invite only)
+sidebar_label: Hyperparameter Sweeps (invite only)
 ---
 
 ## Overview
