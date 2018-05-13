@@ -31,7 +31,7 @@ const siteConfig = {
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
-  baseUrl: '/docs/',
+  baseUrl: '/',
   cname: 'https://docs.wandb.com',
 
   // Used for publishing and more

@@ -78,7 +78,7 @@ class HomeSplash extends React.Component {
       <SplashContainer>
         <div className="inner">
           <ProjectTitle />
-          <img style={{maxWidth: 800}} src={pageUrl("/img/teaser.png")} />
+          <img style={{maxWidth: 800}} src={pageUrl("img/teaser.png")} />
           <PromoSection>
             <Button href={docUrl('started.html', language)}>Getting Started</Button>
             <Button href={docUrl('examples.html', language)}>Example Projects</Button>
@@ -177,7 +177,7 @@ const Showcase = props => {
     .map((user, i) => {
       return (
         <a href={user.infoLink} key={i}>
-          <img src={pageUrl(user.image)} alt={user.caption} title={user.caption} />
+          <img src={user.image} alt={user.caption} title={user.caption} />
         </a>
       );
     });
