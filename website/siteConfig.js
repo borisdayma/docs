@@ -32,10 +32,11 @@ const siteConfig = {
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
   baseUrl: '/docs/',
+  cname: 'https://docs.wandb.com',
 
   // Used for publishing and more
   projectName: 'docs',
-  organizationName: 'Weights & Biases',
+  organizationName: 'wandb',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
