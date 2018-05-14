@@ -18,5 +18,8 @@ You should be able to refresh your browser to see basic changes.  If you change 
 ## Deployment
 
 ```shell
-GIT_USER=<username> USE_SSH=true yarn run publish-gh-pages
+yarn deploy
+# Behind the scenes this runs:
+GIT_USER=$USER USE_SSH=true yarn run publish-gh-pages
+# If $USER is not your github username you'll have to run it manually
 ```

@@ -9,6 +9,9 @@
     .docsNavContainer nav.toc .navBreadcrumb {
         background: #f9f9f9;
     }
+    .homeContainer img {
+        max-width: 360px !important;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -73,11 +76,9 @@ body {
 .fixedHeaderContainer a {
     height: 50px;
 }
-
 .navPusher {
     padding-top: 25px;
 }
-
-nav.toc {
-    position: fixed;
+.homeContainer img {
+    max-width: 800px;
 }
