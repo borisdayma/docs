@@ -17,10 +17,10 @@ wandb.log({'accuracy': 0.9, 'epoch': 5})
 
 ## Incremental Logging
 
-If you need to set metrics from multiple places in your code, you can accumulate them by flagging **complete** as false in `wandb.log`, just be sure to call `wandb.log` without the **complete** flag to persist the metrics.
+If you need to set metrics from multiple places in your code, you can accumulate them by flagging **commit** as false in `wandb.log`, just be sure to call `wandb.log` without the **commit** flag to persist the metrics.
 
 ```python
-wandb.log({'loss': 0.2}, complete=False)
+wandb.log({'loss': 0.2}, commit=False)
 # Somewhere else when I'm ready to report this step:
 wandb.log({'accuracy': 0.8})
 ```
@@ -60,7 +60,7 @@ The history object is used to track metrics that change as the model trains.  Yo
 
 > If you collect all your metrics at once, it's usually simplest to just call 
 > `wandb.log` and pass in a dictionary of all the metrics you would like to save.
-> You can update the row without saving by calling `wandb.log` with **complete**=*False* as a keyword argument.
+> You can update the row without saving by calling `wandb.log` with **commit**=*False* as a keyword argument.
 
 ### Tensorflow
 ```python--tensorflow
