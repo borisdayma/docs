@@ -9,6 +9,7 @@
 <url> <loc>https://docs.wandb.com/docs/configs.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.wandb.com/docs/configs.html" /> </url>
 <url> <loc>https://docs.wandb.com/docs/examples.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.wandb.com/docs/examples.html" /> </url>
 <url> <loc>https://docs.wandb.com/docs/grouping.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.wandb.com/docs/grouping.html" /> </url>
+<url> <loc>https://docs.wandb.com/docs/jupyter.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.wandb.com/docs/jupyter.html" /> </url>
 <url> <loc>https://docs.wandb.com/docs/keras.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.wandb.com/docs/keras.html" /> </url>
 <url> <loc>https://docs.wandb.com/docs/limits.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.wandb.com/docs/limits.html" /> </url>
 <url> <loc>https://docs.wandb.com/docs/Saving Hyperparameters.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.wandb.com/docs/Saving Hyperparameters.html" /> </url>
