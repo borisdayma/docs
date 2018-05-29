@@ -76,6 +76,11 @@ body {
     font-family: 'graphein';
 }
 
+code {
+    padding: 2px 4px;
+    font-size: 85%;
+}
+
 .fixedHeaderContainer {
     padding: 0px;
     background: #f4f4f4;

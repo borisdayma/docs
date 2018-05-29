@@ -3,17 +3,19 @@ title: Command Line Overview
 sidebar_label: Command Line Overview
 ---
 
-Values | Meaning
+After running `pip install wandb` you should have a new command available, **wandb**.  The following sub-commands are available:
+
+Sub-command | Description
 ------ | -------
 docs    |  Open documentation in a browser
-init    |  Configure a directory with Weights & Biases
-signup  |  Create a new Weights & Biases account
-login   |  Login to Weights & Biases
+init    |  Configure a directory with W&B
+signup  |  Create a new W&B account
+login   |  Login to W&B
+off     |  Disable W&B in this directory, useful for testing
+on       | Ensure W&B is enabled in this directory
 projects | List projects
-pull     | Pull files from Weights & Biases
+pull     | Pull files for a run from W&B
 restore  | Restore code and config state for a run
-run      | Launch a job
+run      | Launch a job, required on Windows
 runs     | List runs in a project
 status   | List current directory status
-sweep    | Create a sweep *(invite only)*
-agent   |  Run the WandB agent *(invite only)*

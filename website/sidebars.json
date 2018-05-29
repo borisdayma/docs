@@ -1,7 +1,7 @@
 {
   "docs": {
     "Getting Started": ["started"],
-    "Python Library": ["configs", "logs", "saving", "jupyter", "keras"],
+    "Python Library": ["configs", "logs", "images", "histograms", "saving", "jupyter", "keras"],
     "Command Line": ["cli", "restoring"],
     "Advanced Usage": ["automated", "grouping", "resuming", "security", "limits"],
     "Sweeps": ["sweep"],
