@@ -71,10 +71,22 @@ body {
 
 .fixedHeaderContainer {
     padding: 0px;
+    background: #f4f4f4;
 }
 
 .fixedHeaderContainer a {
     height: 50px;
+}
+
+.navigationSlider .slidingNav ul li a {
+    line-height: 50px;
+    color: #888;
+    height: 50px;
+}
+
+.navigationSlider .slidingNav ul li a:focus, .navigationSlider .slidingNav ul li a:hover, .navigationSlider .slidingNav ul li.siteNavItemActive a, .navigationSlider .slidingNav ul li.siteNavGroupActive a {
+    background: #888;
+    color: #FFF;
 }
 .navPusher {
     padding-top: 25px;

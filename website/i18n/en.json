@@ -14,8 +14,12 @@
     "Saving Hyperparameters": "Saving Hyperparameters",
     "examples": "Examples of W&B Projects",
     "Examples of W&B Projects": "Examples of W&B Projects",
+    "faq": "Frequently Asked Questions",
+    "FAQ": "FAQ",
     "grouping": "Grouping",
     "Grouping": "Grouping",
+    "jupyter": "Jupyter",
+    "Jupyter": "Jupyter",
     "keras": "Keras Callback",
     "Keras Callback": "Keras Callback",
     "limits": "Limits",
@@ -34,11 +38,14 @@
     "Getting Started": "Getting Started",
     "sweep": "Sweeps (invite only)",
     "Hyperparameter Sweeps (invite only)": "Hyperparameter Sweeps (invite only)",
+    "Docs": "Docs",
+    "Company": "Company",
+    "Login": "Login",
     "Python Library": "Python Library",
     "Command Line": "Command Line",
     "Advanced Usage": "Advanced Usage",
     "Sweeps": "Sweeps",
-    "Examples": "Examples"
+    "Resources": "Resources"
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",

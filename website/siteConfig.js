@@ -44,8 +44,9 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
   //  {doc: 'gallery', label: 'Gallery'},
-  //  {doc: 'started', label: 'Get Started'},
-  //  {page: 'https://wandb.com', label: 'Company'},
+      {doc: 'started', label: 'Docs'},
+      {href: 'https://wandb.com', label: 'Company'},
+      {href: 'https://app.wandb.ai', label: 'Login'},
   //  {blog: true, label: 'Blog'},
   ],
 
@@ -53,7 +54,7 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/wandb.svg',
+  headerIcon: 'img/wandb-long.svg',
   footerIcon: 'img/wandb.svg',
   favicon: 'img/favicon.png',
 

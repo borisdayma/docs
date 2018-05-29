@@ -5,6 +5,6 @@
     "Command Line": ["cli", "restoring"],
     "Advanced Usage": ["automated", "grouping", "resuming", "security", "limits"],
     "Sweeps": ["sweep"],
-    "Examples": ["examples"]
+    "Resources": ["examples", "faq"]
   }
 }

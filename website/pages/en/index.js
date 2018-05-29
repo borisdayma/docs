@@ -187,8 +187,9 @@ const Showcase = props => {
       <h2>{"Who's Using This?"}</h2>
       <div className="logos">{showcase}</div>
       <div className="more-users">
-        <a className="button" href={pageUrl('users.html', props.language)}>
-          More wandb users
+        <p>Are you using this project?</p>
+        <a href="mailto:contact@wandb.com" className="button">
+          Let us know
         </a>
       </div>
     </div>
