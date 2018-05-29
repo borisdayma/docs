@@ -9,6 +9,9 @@
     .docsNavContainer nav.toc .navBreadcrumb {
         background: #f9f9f9;
     }
+    .docsNavContainer {
+        width: 180px;
+    }
     .homeContainer img {
         max-width: 360px !important;
     }
@@ -67,9 +70,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'graphein';
-}
-.docsNavContainer {
-    width: 180px;
 }
 
 .fixedHeaderContainer {
