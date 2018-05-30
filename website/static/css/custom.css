@@ -3,25 +3,30 @@
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 @media only screen and (max-width: 736px) {
-    .separateOnPageNav .navPusher {
-        padding-top: 50px;
-    }
-    .docsNavContainer nav.toc .navBreadcrumb {
-        background: #f9f9f9;
-    }
-    .homeContainer img {
-        max-width: 360px !important;
-    }
+  .separateOnPageNav .navPusher {
+    padding-top: 50px;
+  }
+  .docsNavContainer nav.toc .navBreadcrumb {
+    background: #f9f9f9;
+  }
+  .homeContainer img {
+    max-width: 360px !important;
+  }
 }
 @media only screen and (min-width: 736px) {
-    .docsNavContainer {
-        width: 180px;
-    }
+  .docsNavContainer {
+    width: 180px;
+  }
 }
 @media only screen and (min-width: 1024px) {
-    .sideNavVisible .navPusher .mainContainer {
-        max-width: 100%;
-    }
+  .sideNavVisible .navPusher .mainContainer {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 736px) {
+  .homeContainer .homeWrapper {
+    padding: 4em 10px;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -34,75 +39,78 @@
 }
 
 @font-face {
-    font-family: 'graphein';
-    src: url(../fonts/grapheinpro-book-webfont.woff) format('woff');
-}
-  
-@font-face {
-    font-family: 'graphein';
-    src: url(../fonts/grapheinpro-bold-webfont.woff) format('woff');
-    font-weight: bold;
+  font-family: "graphein";
+  src: url(../fonts/grapheinpro-book-webfont.woff) format("woff");
 }
 
 @font-face {
-    font-family: 'graphein';
-    src: url(../fonts/grapheinpro-bolditalic-webfont.woff) format('woff');
-    font-weight: bold;
-    font-style: italic;
+  font-family: "graphein";
+  src: url(../fonts/grapheinpro-bold-webfont.woff) format("woff");
+  font-weight: bold;
 }
 
 @font-face {
-    font-family: 'graphein';
-    src: url(../fonts/grapheinpro-italic-webfont.woff) format('woff');
-    font-style: italic;
+  font-family: "graphein";
+  src: url(../fonts/grapheinpro-bolditalic-webfont.woff) format("woff");
+  font-weight: bold;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: 'graphein';
-    src: url(../fonts/grapheinpro-light-webfont.woff) format('woff');
-    font-weight: lighter;
+  font-family: "graphein";
+  src: url(../fonts/grapheinpro-italic-webfont.woff) format("woff");
+  font-style: italic;
 }
 
 @font-face {
-    font-family: 'graphein';
-    src: url(../fonts/grapheinpro-lightitalic-webfont.woff) format('woff');
-    font-weight: lighter;
-    font-style: italic;
+  font-family: "graphein";
+  src: url(../fonts/grapheinpro-light-webfont.woff) format("woff");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "graphein";
+  src: url(../fonts/grapheinpro-lightitalic-webfont.woff) format("woff");
+  font-weight: lighter;
+  font-style: italic;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'graphein';
+  margin: 0;
+  padding: 0;
+  font-family: "graphein";
 }
 
 code {
-    padding: 2px 4px;
-    font-size: 85%;
+  padding: 2px 4px;
+  font-size: 85%;
 }
 
 .fixedHeaderContainer {
-    padding: 0px;
-    background: #f4f4f4;
+  padding: 0px;
+  background: #f4f4f4;
 }
 
 .fixedHeaderContainer a {
-    height: 50px;
+  height: 50px;
 }
 
 .navigationSlider .slidingNav ul li a {
-    line-height: 50px;
-    color: #888;
-    height: 50px;
+  line-height: 50px;
+  color: #888;
+  height: 50px;
 }
 
-.navigationSlider .slidingNav ul li a:focus, .navigationSlider .slidingNav ul li a:hover, .navigationSlider .slidingNav ul li.siteNavItemActive a, .navigationSlider .slidingNav ul li.siteNavGroupActive a {
-    background: #888;
-    color: #FFF;
+.navigationSlider .slidingNav ul li a:focus,
+.navigationSlider .slidingNav ul li a:hover,
+.navigationSlider .slidingNav ul li.siteNavItemActive a,
+.navigationSlider .slidingNav ul li.siteNavGroupActive a {
+  background: #888;
+  color: #fff;
 }
 .navPusher {
-    padding-top: 25px;
+  padding-top: 25px;
 }
 .homeContainer img {
-    max-width: 800px;
+  max-width: 800px;
 }
