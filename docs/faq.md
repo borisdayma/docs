@@ -15,7 +15,7 @@ W&B is free as long as your projects are public.  If you want to host private pr
 
 ### Q: How is this different than TensorBoard?
 
-W&B has many features that TensorBoard has, but not all.  W&B is a distributed cloud hosted solution that's still snappy after 1000's of runs have been monitored.  We offer additional features such as system metrics, commit history, experiment notes, dashboards, and advanced searching / aggregation across runs and projects.
+W&B is a distributed cloud hosted solution so your results are saved forever and it's still snappy after 1000's of runs have been monitored.  We offer additional features such as system metrics, commit history, experiment notes, dashboards, and advanced searching / aggregation across runs and projects.
 
 ## Technical
 
