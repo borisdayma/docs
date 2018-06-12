@@ -5,7 +5,7 @@ sidebar_label: Limits
 
 ## Rate Limits
 
-The W&B API is rate limited by IP and API key.  New accounts are restricted to 400 requests per minute.  This rate allows you to run approximately 15 processes in parallel and have them report without being throttled.  If the **wandb** client detects it's being limited, it will backoff and retry sending the data in the future.  If you need to run more than 15 processes in parallel send an email to <a href="mailto:contact@wandb.com">contact@wandb.com</a>.
+The W&B API is rate limited by IP and API key.  New accounts are restricted to 200 requests per minute.  This rate allows you to run approximately 15 processes in parallel and have them report without being throttled.  If the **wandb** client detects it's being limited, it will backoff and retry sending the data in the future.  If you need to run more than 15 processes in parallel send an email to <a href="mailto:contact@wandb.com">contact@wandb.com</a>.
 
 ## Size Limits
 

@@ -16,6 +16,6 @@ with wandb.monitor():
 
 **wandb.monitor** displays all charts configured for your project and updates as training progresses directly in your notebook.
 
-### Sharing Notebooks
+## Sharing Notebooks
 
 If your project is private, viewers of your notebook will be prompted to login to view results.
