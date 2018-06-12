@@ -3,7 +3,11 @@ title: W&B API Overview
 sidebar_label: API
 ---
 
-W&B provides a Python API to read and update existing runs.  This is useful for doing analysis of your existing runs or running an evaluation script and adding additional summary metrics.  The API looks for your API Key stored locally (populated by running `wandb login`), or in the **WANDB_API_KEY** environment variable.
+W&B provides a Python API to read and update existing runs.  This is useful for doing analysis of your existing runs or running an evaluation script and adding additional summary metrics.  
+
+## Authentication
+
+The API looks for your Key stored locally (populated by running `wandb login`), or in the **WANDB_API_KEY** environment variable.
 
 ```python
 import wandb
