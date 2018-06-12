@@ -1,9 +1,9 @@
 ---
-title: W&B API Overview
-sidebar_label: API
+title: W&B Data API Overview
+sidebar_label: Data API
 ---
 
-W&B provides a Python API to read and update existing runs.  This is useful for doing analysis of your existing runs or running an evaluation script and adding additional summary metrics.  
+W&B provides a Data API to import and export data directly.  This is useful for doing custom analysis of your existing runs or running an evaluation script and adding additional summary metrics.  
 
 ## Authentication
 
