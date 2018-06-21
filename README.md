@@ -22,4 +22,8 @@ yarn deploy
 # Behind the scenes this runs:
 GIT_USER=$USER USE_SSH=true yarn run publish-gh-pages
 # If $USER is not your github username you'll have to run it manually
+#
+# Be sure to commit and push your changes before every deploy so everyone stays synchronized
+git commit -a -m "DESCRIPTION OF CHANGES"
+git push
 ```
