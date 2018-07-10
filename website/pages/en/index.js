@@ -14,6 +14,8 @@ const GridBlock = CompLibrary.GridBlock;
 
 const siteConfig = require(process.cwd() + '/siteConfig.js');
 
+
+
 function imgUrl(img) {
   return siteConfig.baseUrl + 'img/' + img;
 }
@@ -57,10 +59,10 @@ const Logo = props => (
 );
 
 const ProjectTitle = props => (
-  <h2 className="projectTitle">
+  <h1 className="projectTitle">
     {siteConfig.title}
     <small>{siteConfig.tagline}</small>
-  </h2>
+  </h1>
 );
 
 const PromoSection = props => (
@@ -74,17 +76,58 @@ const PromoSection = props => (
 class HomeSplash extends React.Component {
   render() {
     let language = this.props.language || '';
+    const quickLinksCol1 = [{title: "Getting Started", 
+                desc: "Try W&B for free in seconds.", 
+                link:'started.html',
+                img: 'img/documentation.png'}, 
+                {title: "Python API Reference",
+                 desc: "Customize analysis and track additional metrics.",
+                 link: 'configs.html',
+                img: 'img/api.svg'}]
+
+    const quickLinksCol2 =[{title: "Example Projects", 
+                desc: "See what W&B can do, and how.", 
+                link:'examples.html',
+                img: 'img/example.png'}, 
+                {title: "FAQ",
+                 desc: "Your questions, already answered.",
+                 link: 'faq.html',
+                  img: 'img/faq.png'}]
     return (
       <SplashContainer>
         <div className="inner">
           <ProjectTitle />
-          <img src={pageUrl("img/teaser.png")} />
-          <PromoSection>
-            <Button href={docUrl('started.html', language)}>Getting Started</Button>
-            <Button href={docUrl('faq.html', language)}>FAQ</Button>
-            <Button href={docUrl('examples.html', language)}>Example Projects</Button>
-            <Button href={docUrl('configs.html', language)}>Python API Reference</Button>
-          </PromoSection>
+          <div className="allCards" style={{marginBottom: "40px"}}>
+            <div className="cardCol1">
+              {quickLinksCol1.map(quickLink => (
+                <a href={docUrl(quickLink.link, language)}>
+                  <div className="cardDisplay">
+                    <img src={pageUrl(quickLink.img)} className="icon"/>
+                    <div style={{display: "inline-block", marginLeft: "5%"}}>
+                      <h3 className="headers">{quickLink.title}</h3>
+                      <p>{quickLink.desc}</p>
+                    </div>
+                  </div>
+                </a>
+              ))}
+             </div>
+            <div className="cardCol2">
+              {quickLinksCol2.map(quickLink => (
+                <a href={docUrl(quickLink.link, language)}>
+                  <div className="cardDisplay">
+                    <img src={pageUrl(quickLink.img)} className="icon"/>
+                    <div style={{display: "inline-block", marginLeft: "5%"}}>
+                      <h3 className="headers">{quickLink.title}</h3>
+                      <p>{quickLink.desc}</p>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+           </div>
+           <a href="https://app.wandb.ai/wandb/face-emotion?view=default">
+            <img src={pageUrl("img/teaser.gif")} />
+          </a>
         </div>
       </SplashContainer>
     );
@@ -185,10 +228,10 @@ const Showcase = props => {
 
   return (
     <div className="productShowcaseSection paddingBottom">
-      <h2>{"Who's Using This?"}</h2>
+      <h3 className="headers" style={{marginTop: "40px", fontSize: "22px"}}>{"Who's Using Weights and Biases?"}</h3>
       <div className="logos">{showcase}</div>
       <div className="more-users">
-        <p>Are you using this project?</p>
+        <p>Are you using W&B?</p>
         <a href="mailto:contact@wandb.com" className="button">
           Let us know
         </a>
