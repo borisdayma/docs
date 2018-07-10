@@ -111,3 +111,34 @@ code {
 .homeContainer img {
   max-width: 800px;
 }
+
+.cardDisplay {
+  border: 5px gray;
+  background-color: white;
+  margin: 10px;
+  height: 45%;
+  padding: 10px;
+  box-shadow: 2px 2px 2px lightgray;
+}
+
+.allCards {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+  margin:auto;
+  height: 30%;
+  display: flex;
+}
+
+.cardCol1 {
+  float:left;
+  width:45%;
+  height: 100%;
+}
+
+.cardCol2 {
+  margin-left: 20px;
+  height: 100%;
+  width:45%;
+}
