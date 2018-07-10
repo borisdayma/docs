@@ -98,6 +98,12 @@ code {
   height: 50px;
 }
 
+.sideNav {
+  height: 100%;
+  position: fixed;
+  background-color: white;
+}
+
 .navigationSlider .slidingNav ul li a:focus,
 .navigationSlider .slidingNav ul li a:hover,
 .navigationSlider .slidingNav ul li.siteNavItemActive a,
@@ -105,9 +111,61 @@ code {
   background: #888;
   color: #fff;
 }
+
+.icon {
+  height: 30px;
+  margin-bottom: 6px;
+}
+
 .navPusher {
   padding-top: 25px;
 }
 .homeContainer img {
   max-width: 800px;
+}
+
+.cardDisplay {
+  border: 1px solid lightgray;
+  text-align: left;
+  background-color: white;
+  width: 97%;
+  margin: 10px;
+  height: 45%;
+  padding: 20px;
+  box-shadow: 2px 2px 2px lightgray;
+}
+
+.headers {
+  font-size: 20px;
+  margin-bottom: 4px;
+  font-weight: 300;
+  color: #55565B;
+}
+
+
+.cardDisplay:hover {
+ box-shadow: 2px 2px 2px  #FFE184;
+ border: 1px solid #E5AD00;
+}
+
+.allCards {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+  margin:auto;
+  height: 30%;
+  display: flex;
+}
+
+.cardCol1 {
+  float:left;
+  width:45%;
+  height: 100%;
+}
+
+.cardCol2 {
+  margin-left: 5%;
+  height: 100%;
+  width:45%;
 }
