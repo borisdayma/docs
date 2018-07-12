@@ -15,7 +15,6 @@ const GridBlock = CompLibrary.GridBlock;
 const siteConfig = require(process.cwd() + '/siteConfig.js');
 
 
-
 function imgUrl(img) {
   return siteConfig.baseUrl + 'img/' + img;
 }
@@ -76,16 +75,15 @@ const PromoSection = props => (
 class HomeSplash extends React.Component {
   render() {
     let language = this.props.language || '';
-    const quickLinksCol1 = [{title: "Getting Started", 
+    const quickLinksCol = [{title: "Getting Started", 
                 desc: "Try W&B for free in seconds.", 
                 link:'started.html',
                 img: 'img/documentation.png'}, 
                 {title: "Python API Reference",
-                 desc: "Customize analysis and track additional metrics.",
+                 desc: "Customize your analysis.",
                  link: 'configs.html',
-                img: 'img/api.svg'}]
-
-    const quickLinksCol2 =[{title: "Example Projects", 
+                img: 'img/api.svg'},
+                {title: "Example Projects", 
                 desc: "See what W&B can do, and how.", 
                 link:'examples.html',
                 img: 'img/example.png'}, 
@@ -98,8 +96,8 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <div className="allCards" style={{marginBottom: "40px"}}>
-            <div className="cardCol1">
-              {quickLinksCol1.map(quickLink => (
+              {quickLinksCol.map((quickLink,index) => (
+                <div className="grid-item" key={index}>
                 <a href={docUrl(quickLink.link, language)}>
                   <div className="cardDisplay">
                     <img src={pageUrl(quickLink.img)} className="icon"/>
@@ -109,21 +107,8 @@ class HomeSplash extends React.Component {
                     </div>
                   </div>
                 </a>
+                </div>
               ))}
-             </div>
-            <div className="cardCol2">
-              {quickLinksCol2.map(quickLink => (
-                <a href={docUrl(quickLink.link, language)}>
-                  <div className="cardDisplay">
-                    <img src={pageUrl(quickLink.img)} className="icon"/>
-                    <div style={{display: "inline-block", marginLeft: "5%"}}>
-                      <h3 className="headers">{quickLink.title}</h3>
-                      <p>{quickLink.desc}</p>
-                    </div>
-                  </div>
-                </a>
-              ))}
-            </div>
            </div>
            <a href="https://app.wandb.ai/wandb/face-emotion?view=default">
             <img src={pageUrl("img/teaser.gif")} />
