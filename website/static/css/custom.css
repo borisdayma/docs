@@ -128,9 +128,6 @@ code {
   border: 1px solid lightgray;
   text-align: left;
   background-color: white;
-  width: 97%;
-  margin: 10px;
-  height: 45%;
   padding: 20px;
   box-shadow: 2px 2px 2px lightgray;
 }
@@ -154,18 +151,14 @@ code {
   margin-right: 10%;
   margin-top: 10%;
   margin:auto;
-  height: 30%;
-  display: flex;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  
 }
 
-.cardCol1 {
-  float:left;
-  width:45%;
-  height: 100%;
-}
-
-.cardCol2 {
-  margin-left: 5%;
-  height: 100%;
-  width:45%;
+@media only screen and (max-width: 810px) {
+  .allCards {
+    grid-template-columns: 1fr;
+  }
 }
