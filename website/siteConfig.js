@@ -44,9 +44,11 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
   //  {doc: 'gallery', label: 'Gallery'},
+     
       {doc: 'started', label: 'Docs'},
       {href: 'https://wandb.com', label: 'Company'},
       {href: 'https://app.wandb.ai', label: 'Login'},
+      { search: true },
   //  {blog: true, label: 'Blog'},
   ],
 
@@ -57,6 +59,11 @@ const siteConfig = {
   headerIcon: 'img/wandb-long.svg',
   footerIcon: 'img/wandb.svg',
   favicon: 'img/favicon.png',
+  algolia: {
+    apiKey: '0510e717ad08795f12b729ed540687cb', 
+    indexName: 'wandb',
+    algoliaOptions: {}
+  },
 
   /* colors for website */
   colors: {
