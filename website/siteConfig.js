@@ -46,7 +46,7 @@ const siteConfig = {
   //  {doc: 'gallery', label: 'Gallery'},
      
       {doc: 'started', label: 'Docs'},
-      {href: 'https://wandb.com', label: 'Company'},
+      {href: 'https://wandb.com/company', label: 'Company'},
       {href: 'https://app.wandb.ai', label: 'Login'},
       { search: true },
   //  {blog: true, label: 'Blog'},
