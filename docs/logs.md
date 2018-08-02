@@ -25,6 +25,14 @@ wandb.log({'loss': 0.2}, commit=False)
 wandb.log({'accuracy': 0.8})
 ```
 
+## Logging Tensors
+
+If you pass a numpy array, pytorch tensor or tensorflow tensor to `wandb.log` we automatically convert it as follows:
+
+1. If the object has a size of 1 just log the scalar value
+2. If the object has a size of 32 or less, convert the tensor to json
+3. If the object has a size greater than 32, log a histogram of the tensor
+
 ## Media
 
 **wandb** supports rich media, currently the following types are supported:
@@ -34,8 +42,7 @@ wandb.log({'accuracy': 0.8})
 
 ## Summary Metrics
 
-The summary statistics are used to track single metrics per model.  If a summary
-metric is modified, only the updated state is saved.  We automatically set summary to the last history row added unless you modify it manually.  If you change a summary metric, we only persist the last value it was set to.
+The summary statistics are used to track single metrics per model.  If a summary metric is modified, only the updated state is saved.  We automatically set summary to the last history row added unless you modify it manually.  If you change a summary metric, we only persist the last value it was set to.
 
 ```python
 wandb.init(config=args)
@@ -47,6 +54,16 @@ for epoch in range(1, args.epochs + 1):
     wandb.run.summary["best_accuracy"] = test_accuracy
     best_accuracy = test_accuracy
 ```
+
+You may want to store evaluation metrics in a runs summary after training has completed.  Summary can handle numpy arrays, pytorch tensors or tensorflow tensors.  When a value is one of these types we persist the entire tensor in a binary file and store high level metrics in the summary object such as min, mean, variance, 95% percentile, etc.
+
+```python
+api = wandb.Api()
+run = api.run("username/project/run_id")
+run.summary["tensor"] = np.random.random(1000)
+run.summary.update()
+```
+
 
 ## History Metrics (wandb.log)
 

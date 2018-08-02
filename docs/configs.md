@@ -7,6 +7,8 @@ sidebar_label: Saving Hyperparameters
 
 Calling `wandb.init()` returns a **run** object. You can also access the **run** object anywhere in your code by importing wandb and calling `wandb.run` _(as long as wandb.init() has already been called)_.
 
+`wandb.init()` accepts a few keyword arguments.  You can set **project** or **entity**, and you can override the directory that **wandb** uses to write it's data to by specifying the **dir** argument.
+
 The config object can be used to save hyperparameters to wandb.  This is useful for visualizing experiments.
 
 ```python
