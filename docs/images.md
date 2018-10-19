@@ -13,3 +13,5 @@ If a numpy array is supplied we assume it's gray scale if the last dimension is 
 manually or just supply a `PIL.Image`.  We recommend you don't add more than 20-50 images per step.
 
 On the W&B runs page, you should edit your graphs and choose "Image Viewer" to see your training images.
+
+You can also pass a `matplotlib` pyplot or figure object into wandb.Image to have the figures saved as images.
