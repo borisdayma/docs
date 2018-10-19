@@ -3,7 +3,7 @@ title: Tutorial
 sidebar_label: Tutorial
 ---
 
-Once you've installed `wandb`, try running W&B with a quick example CNN.
+Once you've installed `wandb`, try tracking this quick example CNN.
 
 Download the sample script. We've added a few lines of code to send logs to W&B.
 ```shell

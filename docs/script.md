@@ -2,8 +2,12 @@
 title: Configure Your Script
 sidebar_label: Configure Your Script
 ---
+Once you've installed W&B, initialize your script directory.
+```shell
+wandb init
+```
 
-Add a few quick lines to your training script to track hyperparameters and performance metrics. When you launch your script, we kick off a background process to handle logging. The logs save to the local wandb folder and from there they sync to the cloud.
+Add a few quick lines to your training script to track hyperparameters and performance metrics.
 
 ```python
 # At the top of your script
