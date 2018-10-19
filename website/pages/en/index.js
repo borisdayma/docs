@@ -59,7 +59,6 @@ const Logo = props => (
 
 const ProjectTitle = props => (
   <h1 className="projectTitle">
-    {siteConfig.title}
     <small>{siteConfig.tagline}</small>
   </h1>
 );
