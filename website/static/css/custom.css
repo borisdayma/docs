@@ -162,3 +162,8 @@ code {
     grid-template-columns: 1fr;
   }
 }
+
+/* Hiding the white W&B in the nav bar*/
+.fixedHeaderContainer header h2 {
+  display: none;
+}
