@@ -25,7 +25,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: '' /* title for your website */,
+  title: 'W&B' /* title for your website */,
   tagline: 'Documentation, Guides and Examples',
   url: 'https://docs.wandb.com' /* your website url */,
   // For github.io type URLs, you would set the url and baseUrl like:
