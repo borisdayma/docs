@@ -32,6 +32,8 @@
     "Limits": "Limits",
     "logs": "Logging Metrics",
     "Logging Metrics": "Logging Metrics",
+    "pytorch": "PyTorch Support",
+    "PyTorch": "PyTorch",
     "restoring": "Restoring State",
     "Restoring State": "Restoring State",
     "resuming": "Resuming",

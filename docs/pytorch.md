@@ -28,8 +28,8 @@ for batch_idx, (data, target) in enumerate(train_loader):
 
 ### Options
 
-By default the hook only logs gradients. If you want to log historgrams of parameter values as well, you can specify `wandb.hook_torch(model, log="all")`. Valid options for the log argument are: "gradients", "parameters", "all", or None.
+By default the hook only logs gradients. If you want to log histograms of parameter values as well, you can specify `wandb.hook_torch(model, log="all")`. Valid options for the log argument are: "gradients", "parameters", "all", or None.
 
 ## Images
 
-You can pass pytorch tensors with image data into `wandb.Image` and torchvision utils will be used to log them automatically.
+You can pass PyTorch tensors with image data into `wandb.Image` and torchvision utils will be used to log them automatically.

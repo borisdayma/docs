@@ -1,9 +1,25 @@
 {
   "docs": {
     "Getting Started": ["started"],
-    "Python Library": ["configs", "logs", "images", "histograms", "saving", "keras", "jupyter", "api"],
+    "Python Library": [
+      "configs",
+      "logs",
+      "images",
+      "histograms",
+      "saving",
+      "keras",
+      "pytorch",
+      "jupyter",
+      "api"
+    ],
     "Command Line": ["cli", "restoring"],
-    "Advanced Usage": ["automated", "grouping", "resuming", "security", "limits"],
+    "Advanced Usage": [
+      "automated",
+      "grouping",
+      "resuming",
+      "security",
+      "limits"
+    ],
     "Sweeps": ["sweep"],
     "Resources": ["examples", "faq"]
   }
