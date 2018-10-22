@@ -17,6 +17,7 @@
 <url> <loc>https://docs.wandb.com/docs/keras.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.wandb.com/docs/keras.html" /> </url>
 <url> <loc>https://docs.wandb.com/docs/limits.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.wandb.com/docs/limits.html" /> </url>
 <url> <loc>https://docs.wandb.com/docs/logs.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.wandb.com/docs/logs.html" /> </url>
+<url> <loc>https://docs.wandb.com/docs/pytorch.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.wandb.com/docs/pytorch.html" /> </url>
 <url> <loc>https://docs.wandb.com/docs/restoring.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.wandb.com/docs/restoring.html" /> </url>
 <url> <loc>https://docs.wandb.com/docs/resuming.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.wandb.com/docs/resuming.html" /> </url>
 <url> <loc>https://docs.wandb.com/docs/saving.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.wandb.com/docs/saving.html" /> </url>
