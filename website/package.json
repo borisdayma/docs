@@ -10,7 +10,7 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "docusaurus": "^1.0.15"
+    "docusaurus": "^1.5.0"
   },
   "dependencies": {
     "semantic-ui-react": "^0.82.0"
