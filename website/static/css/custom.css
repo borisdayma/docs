@@ -83,6 +83,10 @@ code {
   font-size: 85%;
 }
 
+.fixedHeaderContainer header .headerTitleWithLogo {
+  display: none;
+}
+
 .fixedHeaderContainer {
   padding: 0px;
   background: #f4f4f4;
@@ -136,13 +140,18 @@ code {
   font-size: 20px;
   margin-bottom: 4px;
   font-weight: 300;
-  color: #55565B;
+  color: #55565b;
+}
+h1,
+h2,
+h3 {
+  color: #55565b;
+  margin-top: 5px;
 }
 
-
 .cardDisplay:hover {
- box-shadow: 2px 2px 2px  #FFE184;
- border: 1px solid #E5AD00;
+  box-shadow: 2px 2px 2px #ffe184;
+  border: 1px solid #e5ad00;
 }
 
 .allCards {
@@ -150,11 +159,10 @@ code {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 10%;
-  margin:auto;
+  margin: auto;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr;
-  
 }
 
 @media only screen and (max-width: 810px) {
