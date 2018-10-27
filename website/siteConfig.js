@@ -46,14 +46,14 @@ const siteConfig = {
   //  {doc: 'gallery', label: 'Gallery'},
      
       {doc: 'started', label: 'Docs'},
-      {href: 'https://wandb.com/company', label: 'Company'},
+      {href: 'https://wandb.com', label: 'Company'},
       {href: 'https://app.wandb.ai', label: 'Login'},
       { search: true },
   //  {blog: true, label: 'Blog'},
   ],
 
   // If you have users set above, you add it here:
-  users,
+  //users,
 
   /* path to images for header/footer */
   headerIcon: 'img/wandb-long.svg',
