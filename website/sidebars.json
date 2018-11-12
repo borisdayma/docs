@@ -21,6 +21,7 @@
       "limits"
     ],
     "Sweeps": ["sweep"],
-    "Resources": ["examples", "faq"]
+    "Examples": ["keras-example", "tensorflow-example", "pytorch-example", "examples"],
+    "Resources": ["faq"]
   }
 }

@@ -1,37 +1,11 @@
 ---
 title: Examples of W&B Projects
-sidebar_label: Examples of W&B Projects
+sidebar_label: More Projects
 ---
 
-## Simple Projects
+## Example Projects
 
-These are good training scripts to look at to get a feel for how to integrate wandb.
-
-### Fashion-mnist CNN (PyTorch) 
-
-Pytorch code to train a fashion mnist classifier.
-
-* [W&B Dashboard](https://app.wandb.ai/l2k2/hyperparam-mnist)
-* [Github Source Code](https://github.com/wandb/examples/blob/master/pytorch-cnn-mnist/train.py)  
-
-
-### Fashion-mnist CNN (Keras)
-
-Keras code to train a fashion mnist classifier.
-
-* [W&B Dashboard](https://app.wandb.ai/l2k2/fashion/runs)
-* [Github Source Code](https://github.com/wandb/examples/blob/master/keras-cnn-fashion/train.py) 
-
-### Face Emotion Classifier (Keras)
-
-Keras code to train an emotion classifier for faces.
-
-* [W&B Dashboard](https://app.wandb.ai/wandb/face-emotion)
-* [Github Source Code](https://github.com/lukas/face_classification)
-
-## Larger Projects
-
-These are bigger projects that use more wandb features.
+These example projects that use wandb.  The W&B dashboard is the result of running the code with wandb.  We also include github links to the original code.
 
 ### Colorizer (Keras)
 
@@ -46,5 +20,17 @@ Code to automatically color B&W images.
 
 * [W&B Dashboard](https://app.wandb.ai/clarence-n-huang/color-best-looking/reports)
 * [Github Source Code](https://github.com/clarencenhuang/dl-colorize)
+
+### Face Emotion Classifier (Keras)
+
+Keras code to train an emotion classifier for faces.
+
+* [W&B Dashboard](https://app.wandb.ai/wandb/face-emotion)
+* [Github Source Code](https://github.com/lukas/face_classification)
+
+### Mask RCNN (Keras)
+
+* [W&B Dashboard](https://app.wandb.ai/trentwatson1/mask-rcnn/reports?view=%2FNew%20Report...)
+* [Github Source Code](https://github.com/connorhough/mask_rcnn)
 
 ## Can we add your project?  Email us!

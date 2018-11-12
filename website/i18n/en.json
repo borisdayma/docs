@@ -4,105 +4,62 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "Documentation, Guides and Examples",
-    "docs": {
-      "api": {
-        "title": "W&B Data API Overview",
-        "sidebar_label": "Data API"
-      },
-      "automated": {
-        "title": "Running in Automated Environments",
-        "sidebar_label": "Environment Variables"
-      },
-      "board": {
-        "title": "Docusaurus",
-        "sidebar_label": "The Board"
-      },
-      "cli": {
-        "title": "Command Line Overview",
-        "sidebar_label": "Command Line Overview"
-      },
-      "configs": {
-        "title": "Saving Hyperparameters",
-        "sidebar_label": "Saving Hyperparameters"
-      },
-      "examples": {
-        "title": "Examples of W&B Projects",
-        "sidebar_label": "Examples of W&B Projects"
-      },
-      "faq": {
-        "title": "Frequently Asked Questions",
-        "sidebar_label": "FAQ"
-      },
-      "grouping": {
-        "title": "Grouping",
-        "sidebar_label": "Grouping"
-      },
-      "histograms": {
-        "title": "Histograms",
-        "sidebar_label": "Histograms"
-      },
-      "images": {
-        "title": "Images",
-        "sidebar_label": "Images"
-      },
-      "jupyter": {
-        "title": "Jupyter",
-        "sidebar_label": "Jupyter"
-      },
-      "keras": {
-        "title": "Keras Callback",
-        "sidebar_label": "Keras Callback"
-      },
-      "limits": {
-        "title": "Limits",
-        "sidebar_label": "Limits"
-      },
-      "logs": {
-        "title": "Logging Metrics",
-        "sidebar_label": "Logging Metrics"
-      },
-      "pytorch": {
-        "title": "PyTorch Support",
-        "sidebar_label": "PyTorch"
-      },
-      "restoring": {
-        "title": "Restoring State",
-        "sidebar_label": "Restoring State"
-      },
-      "resuming": {
-        "title": "Resuming",
-        "sidebar_label": "Resuming"
-      },
-      "saving": {
-        "title": "Saving Files",
-        "sidebar_label": "Saving Files"
-      },
-      "security": {
-        "title": "Security",
-        "sidebar_label": "Security"
-      },
-      "started": {
-        "title": "Getting Started",
-        "sidebar_label": "Getting Started"
-      },
-      "sweep": {
-        "title": "Sweeps (invite only)",
-        "sidebar_label": "Hyperparameter Sweeps"
-      }
-    },
-    "links": {
-      "Docs": "Docs",
-      "Company": "Company",
-      "Login": "Login"
-    },
-    "categories": {
-      "Getting Started": "Getting Started",
-      "Python Library": "Python Library",
-      "Command Line": "Command Line",
-      "Advanced Usage": "Advanced Usage",
-      "Sweeps": "Sweeps",
-      "Resources": "Resources"
-    }
+    "api": "W&B Data API Overview",
+    "Data API": "Data API",
+    "automated": "Running in Automated Environments",
+    "Environment Variables": "Environment Variables",
+    "board": "Docusaurus",
+    "The Board": "The Board",
+    "cli": "Command Line Overview",
+    "Command Line Overview": "Command Line Overview",
+    "configs": "Saving Hyperparameters",
+    "Saving Hyperparameters": "Saving Hyperparameters",
+    "examples": "Examples of W&B Projects",
+    "More Projects": "More Projects",
+    "faq": "Frequently Asked Questions",
+    "FAQ": "FAQ",
+    "grouping": "Grouping",
+    "Grouping": "Grouping",
+    "histograms": "Histograms",
+    "Histograms": "Histograms",
+    "images": "Images",
+    "Images": "Images",
+    "jupyter": "Jupyter",
+    "Jupyter": "Jupyter",
+    "keras-example": "Keras Example",
+    "Keras": "Keras",
+    "keras": "Keras Callback",
+    "Keras Callback": "Keras Callback",
+    "limits": "Limits",
+    "Limits": "Limits",
+    "logs": "Logging Metrics",
+    "Logging Metrics": "Logging Metrics",
+    "pytorch-example": "PyTorch Example",
+    "PyTorch": "PyTorch",
+    "pytorch": "PyTorch Support",
+    "restoring": "Restoring State",
+    "Restoring State": "Restoring State",
+    "resuming": "Resuming",
+    "Resuming": "Resuming",
+    "saving": "Saving Files",
+    "Saving Files": "Saving Files",
+    "security": "Security",
+    "Security": "Security",
+    "started": "Getting Started",
+    "Getting Started": "Getting Started",
+    "sweep": "Sweeps (invite only)",
+    "Hyperparameter Sweeps": "Hyperparameter Sweeps",
+    "tensorflow-example": "TensorFlow Example",
+    "TensorFlow": "TensorFlow",
+    "Docs": "Docs",
+    "Company": "Company",
+    "Login": "Login",
+    "Python Library": "Python Library",
+    "Command Line": "Command Line",
+    "Advanced Usage": "Advanced Usage",
+    "Sweeps": "Sweeps",
+    "Examples": "Examples",
+    "Resources": "Resources"
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",
