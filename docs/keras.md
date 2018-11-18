@@ -1,6 +1,6 @@
 ---
-title: Keras Callback
-sidebar_label: Keras Callback
+title: Keras Support
+sidebar_label: Keras Support
 ---
 
 ## Overview

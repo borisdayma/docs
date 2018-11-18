@@ -13,6 +13,10 @@ You can pronounce it w-and-b (as we originally intended), wand-b (because it's m
 
 W&B is free as long as your projects are public.  If you want to host private projects, email us at contact@wandb.com.
 
+### Q: Do you offer an on-premise version of your software?
+
+Yes!  If you're interested tell us at contact@wandb.com.
+
 ### Q: How is this different than TensorBoard?
 
 W&B is a distributed cloud hosted solution so your results are saved forever and it's still snappy after 1000's of runs have been monitored.  We offer additional features such as system metrics, commit history, experiment notes, dashboards, and advanced searching / aggregation across runs and projects.
@@ -35,6 +39,6 @@ By default metrics are collected every 2 seconds and averaged over a 30 second p
 
 Currently the library only works with Python 2.7+ & 3.6+ projects.  The architecture mentioned above should enable us to integrate with other languages easily.  If you have a need for monitoring other languages, send us a note at contact@wandb.com.
 
-### Q: Do you offer an on-premise version of your software.
+### Q: Is the log function lazy? More specifically, I don't want to be dependent on the network to send the results to your servers and then carry on with my local operations.
 
-Currently we only provide a hosted version our software, but plan to offer an on-premise version in the future.  If you're interested tell us at contact@wandb.com
+Calling wandb.log  writes a line to a local file, it does not block on any network calls.  When you call wandb.init  we launch a new process on the same machine that listens for filesystem changes and talks to our web service asynchronously from your training process.
