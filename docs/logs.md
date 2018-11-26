@@ -5,7 +5,7 @@ sidebar_label: Metrics
 
 ## Overview
 
-W&B can log simple things like accuracy and loss as a model is training.  It can log histograms and custom matplotlib objects.  It can also help visualize media as intermediate output for a training run.  
+W&B can log simple things like accuracy and loss as a model is training. It can log histograms and custom matplotlib objects. It can also help visualize media as intermediate output for a training run.
 
 ## Simple Logging
 
@@ -17,7 +17,13 @@ wandb.log({'accuracy': 0.9, 'epoch': 5})
 
 ## Incremental Logging
 
-If you need to set metrics from multiple places in your code, you can accumulate them by flagging **commit** as false in `wandb.log`, just be sure to call `wandb.log` without the **commit** flag to persist the metrics.
+If you have access to the global step, you can specify it in calls to `wandb.log`. This enables you to call `wandb.log` multiple times in a single step, we only persist the most recent values when the step changes.
+
+```python
+wandb.log({'loss': 0.2}, step=step)
+```
+
+You can also set **commit=False** in `wandb.log` to accumulate metrics, just be sure to call `wandb.log` without the **commit** flag to persist the metrics.
 
 ```python
 wandb.log({'loss': 0.2}, commit=False)
@@ -33,16 +39,19 @@ If you pass a numpy array, pytorch tensor or tensorflow tensor to `wandb.log` we
 2. If the object has a size of 32 or less, convert the tensor to json
 3. If the object has a size greater than 32, log a histogram of the tensor
 
-## Media
+## Rich Media / Artifacts
 
-**wandb** supports rich media, currently the following types are supported:
+**wandb** supports logging rich media, currently the following types are supported:
 
-* [images](/docs/images.html)
-* [histograms](/docs/histograms.html)
+- [images](/docs/artifacts.html#logging-images)
+- [audio](/docs/artifacts.html#logging-audio)
+- [plots](/docs/artifacts.html#logging-plots)
+- [tables](/docs/artifacts.html#logging-tables)
+- [histograms](/docs/histograms.html)
 
 ## Summary Metrics
 
-The summary statistics are used to track single metrics per model.  If a summary metric is modified, only the updated state is saved.  We automatically set summary to the last history row added unless you modify it manually.  If you change a summary metric, we only persist the last value it was set to.
+The summary statistics are used to track single metrics per model. If a summary metric is modified, only the updated state is saved. We automatically set summary to the last history row added unless you modify it manually. If you change a summary metric, we only persist the last value it was set to.
 
 ```python
 wandb.init(config=args)
@@ -55,7 +64,7 @@ for epoch in range(1, args.epochs + 1):
     best_accuracy = test_accuracy
 ```
 
-You may want to store evaluation metrics in a runs summary after training has completed.  Summary can handle numpy arrays, pytorch tensors or tensorflow tensors.  When a value is one of these types we persist the entire tensor in a binary file and store high level metrics in the summary object such as min, mean, variance, 95% percentile, etc.
+You may want to store evaluation metrics in a runs summary after training has completed. Summary can handle numpy arrays, pytorch tensors or tensorflow tensors. When a value is one of these types we persist the entire tensor in a binary file and store high level metrics in the summary object such as min, mean, variance, 95% percentile, etc.
 
 ```python
 api = wandb.Api()
@@ -64,16 +73,16 @@ run.summary["tensor"] = np.random.random(1000)
 run.summary.update()
 ```
 
-
 ## History Metrics (wandb.log)
 
-The history object is used to track metrics that change as the model trains.  You can access a mutable dictionary of metrics via `run.history.row`.  The row will be saved and a new row created when `run.history.add` or `wandb.log` is called.
+The history object is used to track metrics that change as the model trains. You can access a mutable dictionary of metrics via `run.history.row`. The row will be saved and a new row created when `run.history.add` or `wandb.log` is called.
 
-> If you collect all your metrics at once, it's usually simplest to just call 
+> If you collect all your metrics at once, it's usually simplest to just call
 > `wandb.log` and pass in a dictionary of all the metrics you would like to save.
-> You can update the row without saving by calling `wandb.log` with **commit**=*False* as a keyword argument.
+> You can update the row without saving by calling `wandb.log` with **commit**=_False_ or **step**=_X_ as keyword arguments.
 
 ### Tensorflow
+
 ```python--tensorflow
 wandb.init(config=flags.FLAGS)
 
@@ -92,6 +101,7 @@ with tf.Session() as sess:
 ```
 
 ### PyTorch
+
 ```python--pytorch
 # Start pytorch training
 wandb.init(config=args)
@@ -103,16 +113,4 @@ for epoch in range(1, args.epochs + 1):
   torch.save(model.state_dict(), 'model')
 
   wandb.log({"loss": train_loss, "val_loss": test_loss})
-```
-
-### Context Manager
-
-We provide a context manager via the `step` method that automatically calls `add`
-and accepts a boolean to help keep nested code clean.  You can check the boolean expression  by accessing `run.history.compute`.
-
-```python
-with run.history.step(batch_idx % log_interval == 0):
-  run.history.row.update({"metric": 1})
-  if run.history.compute:
-    # Something expensive here
 ```

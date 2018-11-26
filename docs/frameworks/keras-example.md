@@ -3,11 +3,9 @@ title: Keras Example
 sidebar_label: Keras
 ---
 
-This is a complete example of Keras code that trains a CNN and saves to W&B
+This is a complete example of Keras code that trains a CNN and saves to W&B.
 
-You can find this example at https://github.com/wandb/examples/blob/master/keras-cnn-fashion/train.py
-
-You can find the results of running this code at https://app.wandb.ai/wandb/keras-fashion-mnist/runs/5z1d85qs
+You can find this example on [GitHub](https://github.com/wandb/examples/blob/master/keras-cnn-fashion/train.py) and see the results on [W&B](https://app.wandb.ai/wandb/keras-fashion-mnist/runs/5z1d85qs).
 
 ```python
 from keras.datasets import fashion_mnist

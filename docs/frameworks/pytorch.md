@@ -5,14 +5,14 @@ sidebar_label: PyTorch Support
 
 ## Overview
 
-W&B provides first class support for PyTorch. To automatically log gradients and store the network topology, you can call `hook_torch` and pass in your pytorch model.
+W&B provides first class support for PyTorch. To automatically log gradients and store the network topology, you can call `watch` and pass in your pytorch model.
 
 ```python
 import wandb
 wandb.init(config=args)
 
 # Magic
-wandb.hook_torch(model)
+wandb.watch(model)
 
 model.train()
 for batch_idx, (data, target) in enumerate(train_loader):
@@ -28,7 +28,7 @@ for batch_idx, (data, target) in enumerate(train_loader):
 
 ### Options
 
-By default the hook only logs gradients. If you want to log histograms of parameter values as well, you can specify `wandb.hook_torch(model, log="all")`. Valid options for the log argument are: "gradients", "parameters", "all", or None.
+By default the hook only logs gradients. If you want to log histograms of parameter values as well, you can specify `wandb.pytorch(model, log="all")`. Valid options for the log argument are: "gradients", "parameters", "all", or None.
 
 ## Images
 

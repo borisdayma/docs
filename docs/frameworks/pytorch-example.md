@@ -3,11 +3,9 @@ title: PyTorch Example
 sidebar_label: PyTorch
 ---
 
-This is a complete example of PyTorch code that trains a CNN and saves to W&B
+This is a complete example of PyTorch code that trains a CNN and saves to W&B.
 
-You can find this example at https://github.com/wandb/examples/blob/master/pytorch-cnn-mnist/main.py
-
-You can find the results of running this code at https://app.wandb.ai/wandb/pytorch-mnist/runs/gpok6wds
+You can find this example on [GitHub](https://github.com/wandb/examples/blob/master/pytorch-cnn-mnist/main.py) and see the results on [W&B](https://app.wandb.ai/wandb/pytorch-mnist/runs/gpok6wds).
 
 ```python
 from __future__ import print_function
@@ -72,7 +70,7 @@ def test(args, model, device, test_loader):
     print('\nTest set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%)\n'.format(
         test_loss, correct, len(test_loader.dataset),
         100. * correct / len(test_loader.dataset)))
-    
+
     # Log the images and metrics
     wandb.log({
             "Examples": example_images,
@@ -102,7 +100,7 @@ def main():
                         help='how many batches to wait before logging training status')
     args = parser.parse_args()
     use_cuda = not args.no_cuda and torch.cuda.is_available()
-    
+
     # We load all of the arguments into config to save as hyperparameters
     wandb.config.update(args)
 
@@ -130,7 +128,7 @@ def main():
     optimizer = optim.SGD(model.parameters(), lr=args.lr, momentum=args.momentum)
 
     # This magic line lets us save ther pytorch model and track all of the gradients and optionally parameters
-    wandb.hook_torch(model)
+    wandb.watch(model)
 
     for epoch in range(1, args.epochs + 1):
         train(args, model, device, train_loader, optimizer, epoch)

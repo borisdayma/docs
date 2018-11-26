@@ -2,32 +2,18 @@
   "docs": {
     "Getting Started": ["started"],
     "Examples": [
-      "keras-example", 
-      "tensorflow-example", 
-      "tensorflow-estimator-example",
-      "pytorch-example", 
+      "frameworks/keras-example",
+      "frameworks/tensorflow-example",
+      "frameworks/pytorch-example",
       "examples"
-     ],
-    "Logging": 
-      [
-      "configs",
-      "logs",
-      "histograms",
-      "images",
-      "audio",
-      "matplotlib",
-      "saving"
-      ],
-    "Framework Support": 
-      [
-      "keras",
-      "tensorflow",
-      "pytorch"
-      ],
-    "Other": 
-      [      
-      "jupyter",
-      "api"],
+    ],
+    "Logging": ["configs", "logs", "histograms", "artifacts", "saving"],
+    "Framework Support": [
+      "frameworks/keras",
+      "frameworks/tensorflow",
+      "frameworks/pytorch"
+    ],
+    "Other": ["jupyter", "api"],
     "Command Line": ["cli", "restoring"],
     "Advanced Usage": [
       "automated",

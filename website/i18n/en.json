@@ -4,73 +4,140 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "Documentation, Guides and Examples",
-    "api": "W&B Data API Overview",
-    "Data API": "Data API",
-    "audio": "Audio",
-    "Audio": "Audio",
-    "automated": "Running in Automated Environments",
-    "Environment Variables": "Environment Variables",
-    "board": "Docusaurus",
-    "The Board": "The Board",
-    "cli": "Command Line Overview",
-    "Command Line Overview": "Command Line Overview",
-    "configs": "Logging Hyperparameters and Other Inputs",
-    "Hyperparameters": "Hyperparameters",
-    "examples": "Examples of W&B Projects",
-    "More Projects": "More Projects",
-    "faq": "Frequently Asked Questions",
-    "FAQ": "FAQ",
-    "grouping": "Grouping",
-    "Grouping": "Grouping",
-    "histograms": "Histograms",
-    "Histograms": "Histograms",
-    "images": "Images",
-    "Images": "Images",
-    "jupyter": "Jupyter",
-    "Jupyter": "Jupyter",
-    "keras-example": "Keras Example",
-    "Keras": "Keras",
-    "keras": "Keras Support",
-    "Keras Support": "Keras Support",
-    "limits": "Limits",
-    "Limits": "Limits",
-    "logs": "Logging Metrics",
-    "Metrics": "Metrics",
-    "matplotlib": "Plots",
-    "Plots": "Plots",
-    "pytorch-example": "PyTorch Example",
-    "PyTorch": "PyTorch",
-    "pytorch": "PyTorch Support",
-    "PyTorch Support": "PyTorch Support",
-    "restoring": "Restoring State",
-    "Restoring State": "Restoring State",
-    "resuming": "Resuming",
-    "Resuming": "Resuming",
-    "saving": "Saving Files",
-    "Saving Files": "Saving Files",
-    "security": "Security",
-    "Security": "Security",
-    "started": "Getting Started",
-    "Getting Started": "Getting Started",
-    "sweep": "Sweeps (invite only)",
-    "Hyperparameter Sweeps": "Hyperparameter Sweeps",
-    "tensorflow-estimator-example": "TensorFlow Estimator Example",
-    "TensorFlow Estimator": "TensorFlow Estimator",
-    "tensorflow-example": "TensorFlow Example",
-    "TensorFlow": "TensorFlow",
-    "tensorflow": "TensorFlow Support",
-    "TensorFlow Support": "TensorFlow Support",
-    "Docs": "Docs",
-    "Company": "Company",
-    "Login": "Login",
-    "Examples": "Examples",
-    "Logging": "Logging",
-    "Framework Support": "Framework Support",
-    "Other": "Other",
-    "Command Line": "Command Line",
-    "Advanced Usage": "Advanced Usage",
-    "Sweeps": "Sweeps",
-    "Resources": "Resources"
+    "docs": {
+      "api": {
+        "title": "W&B Data API Overview",
+        "sidebar_label": "Data API"
+      },
+      "artifacts": {
+        "title": "Logging Artifacts",
+        "sidebar_label": "Artifacts"
+      },
+      "audio": {
+        "title": "Audio",
+        "sidebar_label": "Audio"
+      },
+      "automated": {
+        "title": "Running in Automated Environments",
+        "sidebar_label": "Environment Variables"
+      },
+      "board": {
+        "title": "Docusaurus",
+        "sidebar_label": "The Board"
+      },
+      "cli": {
+        "title": "Command Line Overview",
+        "sidebar_label": "Command Line Overview"
+      },
+      "configs": {
+        "title": "Logging Hyperparameters and Other Inputs",
+        "sidebar_label": "Hyperparameters"
+      },
+      "examples": {
+        "title": "Examples of W&B Projects",
+        "sidebar_label": "More Projects"
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "sidebar_label": "FAQ"
+      },
+      "frameworks/keras-example": {
+        "title": "Keras Example",
+        "sidebar_label": "Keras"
+      },
+      "frameworks/keras": {
+        "title": "Keras Support",
+        "sidebar_label": "Keras Support"
+      },
+      "frameworks/pytorch-example": {
+        "title": "PyTorch Example",
+        "sidebar_label": "PyTorch"
+      },
+      "frameworks/pytorch": {
+        "title": "PyTorch Support",
+        "sidebar_label": "PyTorch Support"
+      },
+      "frameworks/tensorflow-example": {
+        "title": "TensorFlow Example",
+        "sidebar_label": "TensorFlow"
+      },
+      "frameworks/tensorflow": {
+        "title": "TensorFlow Support",
+        "sidebar_label": "TensorFlow Support"
+      },
+      "grouping": {
+        "title": "Grouping",
+        "sidebar_label": "Grouping"
+      },
+      "histograms": {
+        "title": "Histograms",
+        "sidebar_label": "Histograms"
+      },
+      "jupyter": {
+        "title": "Jupyter",
+        "sidebar_label": "Jupyter"
+      },
+      "keras": {
+        "title": "Keras Support",
+        "sidebar_label": "Keras Support"
+      },
+      "limits": {
+        "title": "Limits",
+        "sidebar_label": "Limits"
+      },
+      "logs": {
+        "title": "Logging Metrics",
+        "sidebar_label": "Metrics"
+      },
+      "matplotlib": {
+        "title": "Plots",
+        "sidebar_label": "Plots"
+      },
+      "restoring": {
+        "title": "Restoring State",
+        "sidebar_label": "Restoring State"
+      },
+      "resuming": {
+        "title": "Resuming",
+        "sidebar_label": "Resuming"
+      },
+      "saving": {
+        "title": "Saving Files",
+        "sidebar_label": "Saving Files"
+      },
+      "security": {
+        "title": "Security",
+        "sidebar_label": "Security"
+      },
+      "started": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
+      },
+      "sweep": {
+        "title": "Sweeps (invite only)",
+        "sidebar_label": "Hyperparameter Sweeps"
+      },
+      "tensorflow-estimator-example": {
+        "title": "TensorFlow Estimator Example",
+        "sidebar_label": "TensorFlow Estimator"
+      }
+    },
+    "links": {
+      "Docs": "Docs",
+      "Company": "Company",
+      "Login": "Login"
+    },
+    "categories": {
+      "Getting Started": "Getting Started",
+      "Examples": "Examples",
+      "Logging": "Logging",
+      "Framework Support": "Framework Support",
+      "Other": "Other",
+      "Command Line": "Command Line",
+      "Advanced Usage": "Advanced Usage",
+      "Sweeps": "Sweeps",
+      "Resources": "Resources"
+    }
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",
