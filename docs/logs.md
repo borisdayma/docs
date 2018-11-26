@@ -1,11 +1,11 @@
 ---
 title: Logging Metrics
-sidebar_label: Logging Metrics
+sidebar_label: Metrics
 ---
 
 ## Overview
 
-W&B can log simple things like accuracy and loss as a model is training.  It can also help visualize media as intermediate output for a training run.
+W&B can log simple things like accuracy and loss as a model is training.  It can log histograms and custom matplotlib objects.  It can also help visualize media as intermediate output for a training run.  
 
 ## Simple Logging
 

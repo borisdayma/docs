@@ -1,17 +1,33 @@
 {
   "docs": {
     "Getting Started": ["started"],
-    "Python Library": [
+    "Examples": [
+      "keras-example", 
+      "tensorflow-example", 
+      "tensorflow-estimator-example",
+      "pytorch-example", 
+      "examples"
+     ],
+    "Logging": 
+      [
       "configs",
       "logs",
-      "images",
       "histograms",
-      "saving",
+      "images",
+      "audio",
+      "matplotlib",
+      "saving"
+      ],
+    "Framework Support": 
+      [
       "keras",
-      "pytorch",
+      "tensorflow",
+      "pytorch"
+      ],
+    "Other": 
+      [      
       "jupyter",
-      "api"
-    ],
+      "api"],
     "Command Line": ["cli", "restoring"],
     "Advanced Usage": [
       "automated",
@@ -21,7 +37,6 @@
       "limits"
     ],
     "Sweeps": ["sweep"],
-    "Examples": ["keras-example", "tensorflow-example", "pytorch-example", "examples"],
     "Resources": ["faq"]
   }
 }

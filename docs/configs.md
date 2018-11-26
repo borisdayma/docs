@@ -1,6 +1,6 @@
 ---
-title: Saving Hyperparameters
-sidebar_label: Saving Hyperparameters
+title: Logging Hyperparameters and Other Inputs
+sidebar_label: Hyperparameters
 ---
 
 ## Overview
