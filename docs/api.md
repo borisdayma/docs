@@ -43,6 +43,25 @@ run = api.run("username/project/run_id")
 | ------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | summary |                                              | A mutable dict-like property that holds the current summary. Calling update will persist any changes.                                                 |
 | history | _samples=500, stream="default", pandas=True_ | Returns a dataframe containing the number of samples specified captured during the run. If stream is set to "system", returns system metrics instead. |
+| files   | _names=[], per_page=50_                      | Returns files associated with this run. If you pass names you limit to only files with those names                                                    |
+| file    | _name_                                       | Returns a specific file.                                                                                                                              |
+
+## File Attributes
+
+| Attribute  | Description                            |
+| ---------- | -------------------------------------- |
+| name       | a list of tags associated with the run |
+| url        | the source url                         |
+| md5        | and md5 of the content                 |
+| mimetype   | the mimetype of the content            |
+| updated_at | updated timestamp                      |
+| size       | size of the file in bytes              |
+
+## Special Methods
+
+| Method   | Params          | Description                                                                                   |
+| -------- | --------------- | --------------------------------------------------------------------------------------------- |
+| download | _replace=False_ | Download the source file in the current directory. If replace is True, replace existing files |
 
 ```python
 if run.state == "finished":
