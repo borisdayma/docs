@@ -5,10 +5,6 @@
     "previous": "Previous",
     "tagline": "Documentation, Guides and Examples",
     "docs": {
-      "api": {
-        "title": "W&B Data API Overview",
-        "sidebar_label": "Data API"
-      },
       "artifacts": {
         "title": "Logging Artifacts",
         "sidebar_label": "Artifacts"
@@ -73,9 +69,21 @@
         "title": "Histograms",
         "sidebar_label": "Histograms"
       },
-      "jupyter": {
+      "integrations/api": {
+        "title": "W&B Data API Overview",
+        "sidebar_label": "Python Data API"
+      },
+      "integrations/jupyter": {
         "title": "Jupyter",
         "sidebar_label": "Jupyter"
+      },
+      "integrations/kubeflow": {
+        "title": "Kubeflow",
+        "sidebar_label": "Kubeflow"
+      },
+      "integrations/sagemaker": {
+        "title": "SageMaker",
+        "sidebar_label": "SageMaker"
       },
       "keras": {
         "title": "Keras Support",
@@ -132,7 +140,7 @@
       "Examples": "Examples",
       "Logging": "Logging",
       "Framework Support": "Framework Support",
-      "Other": "Other",
+      "Integrations": "Integrations",
       "Command Line": "Command Line",
       "Advanced Usage": "Advanced Usage",
       "Sweeps": "Sweeps",

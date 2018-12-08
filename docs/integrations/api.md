@@ -1,6 +1,6 @@
 ---
 title: W&B Data API Overview
-sidebar_label: Data API
+sidebar_label: Python Data API
 ---
 
 W&B provides a Data API to import and export data directly. This is useful for doing custom analysis of your existing runs or running an evaluation script and adding additional summary metrics.

@@ -13,7 +13,12 @@
       "frameworks/tensorflow",
       "frameworks/pytorch"
     ],
-    "Other": ["jupyter", "api"],
+    "Integrations": [
+      "integrations/sagemaker",
+      "integrations/kubeflow",
+      "integrations/jupyter",
+      "integrations/api"
+    ],
     "Command Line": ["cli", "restoring"],
     "Advanced Usage": [
       "automated",
