@@ -9,7 +9,7 @@ W&B can log simple things like accuracy and loss as a model is training. It can 
 
 ## Simple Logging
 
-Any time you call `wandb.log` and pass in a dictionary of keys and values, the values are saved.
+Any time you call `wandb.log` and pass in a dictionary of keys and values, it will be saved as a new time step for plots in the W&B app.
 
 ```python
 wandb.log({'accuracy': 0.9, 'epoch': 5})
@@ -17,11 +17,13 @@ wandb.log({'accuracy': 0.9, 'epoch': 5})
 
 ## Incremental Logging
 
-If you have access to the global step, you can specify it in calls to `wandb.log`. This enables you to call `wandb.log` multiple times in a single step, we only persist the most recent values when the step changes.
+If you want to log to a single history step from lots of different places in your code you can pass a step index to `wandb.log()` as follows:
 
 ```python
 wandb.log({'loss': 0.2}, step=step)
 ```
+
+As long as you keep passing the same value for `step`, W&B will collect the keys and values from each call in one unified dictionary. As soon you call `wandb.log()` with a different value for `step` than the previous one, W&B will write all the collected keys and values to the history, and start collection over again. Note that this means you should only use this with consecutive values for `step`: 0, 1, 2, .... This feature doesn't let you write to absolutely any history step that you'd like, only the "current" one and the "next" one.
 
 You can also set **commit=False** in `wandb.log` to accumulate metrics, just be sure to call `wandb.log` without the **commit** flag to persist the metrics.
 
