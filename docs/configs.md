@@ -40,9 +40,9 @@ wandb.config.update({"epochs": 4, "batch_size": 32})
 
 You can pass tensorflow flags into the config object.
 
-```python--tensorflow
+```python
 wandb.init()
-wandb.config.epochs = 4   # config variables are saved to the cloud
+wandb.config.epochs = 4  # config variables are saved to the cloud
 
 flags = tf.app.flags
 flags.DEFINE_string('data_dir', '/tmp/data')
