@@ -13,17 +13,16 @@ Specifically, `wandb` helps with:
 
 1.  Tracking, saving and reproducing models.
 2.  Visualizing results across models.
-3.  Debugging and visualizing hardware performance issues.  
+3.  Debugging and visualizing hardware performance issues.
 4.  Automating large-scale hyperparameter search.
 
 ## Installation
 
-W&B is easy to install. 
+W&B is easy to install.
 
 ### Install the python library.
 
 ```shell
-# Install wandb
 pip install wandb
 ```
 
@@ -36,31 +35,20 @@ wandb signup
 ```
 
 > If you signed up via the link, or need to authenticate a new machine you can always run:
+>
 > ```shell
 > wandb login
 > ```
-
-### Create a new project
-
-Initialize wandb in the directory you plan to run your training script in (we do this for you if you ran `wandb signup`).
-
-```shell
-wandb init
-```
-
-Select your username as your team. Choose any name for your first project.  This will create a **wandb** directory that contains a settings file with the information you provided.
-
-> You can optionally check the **./wandb/settings** file 
-> into version control.  All other files and folders in the *wandb* directory are
-> automatically ignored.
 
 ### Near the top of your training script add the **wandb** initialization code:
 
 ```python
 # Inside my model training code
 import wandb
-wandb.init()
+wandb.init(project="my_project")
 ```
+
+We automatically create the project for you if it doesn't exist. You can learn more about additonal options you can pass into to `wandb.init` [here](configs).
 
 ### Save a few hyperparameters in run.config
 
@@ -70,6 +58,7 @@ wandb.config.hidden_layer_size = 128
 ```
 
 ### Log a few metrics
+
 ```python
 
 def my_train_loop():
@@ -80,7 +69,7 @@ def my_train_loop():
 
 ### Save a model _(optional)_
 
-Anything saved in the *run.dir* directory will be uploaded to W&B and saved along with your run when it completes.  This is especially convenient for saving the literal weights and biases.
+Anything saved in the _run.dir_ directory will be uploaded to W&B and saved along with your run when it completes. This is especially convenient for saving the literal weights and biases.
 
 ```python
 model.save(os.path.join(wandb.run.dir, "mymodel.h5"))
@@ -89,27 +78,17 @@ model.save(os.path.join(wandb.run.dir, "mymodel.h5"))
 ### Run your script normally from the commandline
 
 ```shell
-# Run your script normally from the commandline
 python learn.py
 ```
 
-You can view all of your runs at any time by going to 
-https://app.wandb.ai/**$ENTITY_NAME**/**$PROJECT_NAME**.  Your training logs and metrics will be saved along with a record of your git state if you're running from a git repo.
+Your terminal logs, metrics, and files will be synced to the cloud along with a record of your git state if you're running from a git repo.
 
-> You can always rerun *wandb init* to change your project's settings. If you're testing and want to disable wandb syncing, set **WANDB_MODE**=dryrun
+> If you're testing and want to disable wandb syncing, set **WANDB_MODE**=dryrun
 
-## Keras Callback
+## Examples
 
-If you use Keras, you can do an even easier integration by using the Keras callback.
-```python
-# Inside my model training code
-import wandb
-from wandb.keras import WandbCallback
-```
+You can find complete examples of integrating W&B here:
 
-Later in your code add the callback to your Keras fit function
-
-```python
-model.fit(X_train, y_train,  validation_data=(X_test, y_test), epochs=config.epochs,
-    callbacks=[WandbCallback()])
-```
+- [Keras](frameworks/keras-example)
+- [PyTorch](frameworks/pytorch-example)
+- [Tensorflow](frameworks/tensorflow-example)

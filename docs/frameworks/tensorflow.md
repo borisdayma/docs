@@ -1,6 +1,6 @@
 ---
 title: TensorFlow Support
-sidebar_label: TensorFlow Support
+sidebar_label: TensorFlow
 ---
 
 ## Overview
@@ -14,5 +14,17 @@ import wandb
 
 wandb.init(config=tf.FLAGS)
 
-estimator.train(hooks=[WandbHook()])
+estimator.train(hooks=[WandbHook(steps_per_log=1000)])
+```
+
+## Logging manually
+
+The simplest way to log metrics in Tensorflow is by logging `tf.summary` with the tensorflow logger:
+
+```python
+from wandb.tensorflow import log
+
+with tf.Session() as sess:
+    # ...
+    log(tf.summary.merge_all())
 ```

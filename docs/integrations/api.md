@@ -1,13 +1,13 @@
 ---
-title: W&B Data API Overview
-sidebar_label: Python Data API
+title: W&B Export API Overview
+sidebar_label: Python Export API
 ---
 
-W&B provides a Data API to import and export data directly. This is useful for doing custom analysis of your existing runs or running an evaluation script and adding additional summary metrics.
+W&B provides an API to import and export data directly. This is useful for doing custom analysis of your existing runs or running an evaluation script and adding additional summary metrics.
 
 ## Authentication
 
-The API looks for your Key stored locally (populated by running `wandb login`), or in the **WANDB_API_KEY** environment variable.
+The API looks for your key stored locally (populated by running `wandb login`), or in the **WANDB_API_KEY** environment variable.
 
 ```python
 import wandb
@@ -17,34 +17,36 @@ run = api.run("username/project/run_id")
 
 ## Api Methods
 
-| Method | Params                                          | Description                                                                                                               |
-| ------ | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| init   | _overrides={"username": None, "project": None}_ | Accepts optional setting overrides. If you specify username and project here you don't need to include them in the paths. |
-| run    | _path=""_                                       | Returns a Run object given a path. If can be run_id if a global username and project is set.                              |
-| runs   | _path="", filters={}_                           | Returns a Runs object given a path to a project and optional filters.                                                     |
+| Method     | Params                                          | Description                                                                                                               |
+| ---------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| init       | _overrides={"username": None, "project": None}_ | Accepts optional setting overrides. If you specify username and project here you don't need to include them in the paths. |
+| run        | _path=""_                                       | Returns a Run object given a path. If can be run_id if a global username and project is set.                              |
+| runs       | _path="", filters={}_                           | Returns a Runs object given a path to a project and optional filters.                                                     |
+| create_run | _project=None, username=None, run_id=None_      | Returns a new run object after creating it on the server.                                                                 |
 
 ## Run Attributes
 
-| Attribute       | Description                                       |
-| --------------- | ------------------------------------------------- |
-| tags            | a list of tags associated with the run            |
-| name            | the unique identifier of the run                  |
-| state           | one of: _running, finished, crashed, aborted_     |
-| config          | a dict of hyperparameters associated with the run |
-| created_at      | when the run was started                          |
-| heartbeat_at    | the last time the run sent metrics                |
-| description     | any notes associated with the run                 |
-| system_metrics  | the latest system metrics recorded for the run    |
-| summary_metrics | the latest summary metrics recorded for the run   |
+| Attribute      | Description                                       |
+| -------------- | ------------------------------------------------- |
+| tags           | a list of tags associated with the run            |
+| url            | the url of this run                               |
+| name           | the unique identifier of the run                  |
+| state          | one of: _running, finished, crashed, aborted_     |
+| config         | a dict of hyperparameters associated with the run |
+| created_at     | when the run was started                          |
+| heartbeat_at   | the last time the run sent metrics                |
+| description    | any notes associated with the run                 |
+| system_metrics | the latest system metrics recorded for the run    |
 
 ## Special Methods
 
-| Method  | Params                                       | Description                                                                                                                                           |
-| ------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| summary |                                              | A mutable dict-like property that holds the current summary. Calling update will persist any changes.                                                 |
-| history | _samples=500, stream="default", pandas=True_ | Returns a dataframe containing the number of samples specified captured during the run. If stream is set to "system", returns system metrics instead. |
-| files   | _names=[], per_page=50_                      | Returns files associated with this run. If you pass names you limit to only files with those names                                                    |
-| file    | _name_                                       | Returns a specific file.                                                                                                                              |
+| Method               | Params                                       | Description                                                                                                                                           |
+| -------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| @property<br>summary |                                              | A mutable dict-like property that holds the current summary. Calling update will persist any changes.                                                 |
+| history              | _samples=500, stream="default", pandas=True_ | Returns a dataframe containing the number of samples specified captured during the run. If stream is set to "system", returns system metrics instead. |
+| files                | _names=[], per_page=50_                      | Returns files associated with this run. If you pass names you limit to only files with those names                                                    |
+| file                 | _name_                                       | Returns a specific file.                                                                                                                              |
+| update               |                                              | Saves any local changes to the server. Currently supports persisting changes to summary, config, tags, and description                                |
 
 ## File Attributes
 

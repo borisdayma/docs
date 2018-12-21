@@ -1,6 +1,6 @@
 ---
 title: PyTorch Support
-sidebar_label: PyTorch Support
+sidebar_label: PyTorch
 ---
 
 ## Overview

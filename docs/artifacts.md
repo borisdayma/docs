@@ -23,7 +23,7 @@ plt.ylabel('some interesting numbers')
 wandb.log({"chart": plt})
 ```
 
-You can pass a `matplotlib` pyplot or figure object into `wandb.log`. By default we'll convert the plot into a [plotly](https://plot.ly) plot. If you want to explictly log the plot as an image, you can pass the plot into wandb.Image. We also accept directly logging [plotly](https://plot.ly/) charts.
+You can pass a `matplotlib` pyplot or figure object into `wandb.log`. By default we'll convert the plot into a [plotly](https://plot.ly) plot. If you want to explictly log the plot as an image, you can pass the plot into `wandb.Image`. We also accept directly logging [plotly](https://plot.ly/) charts.
 
 ## Logging Audio
 
@@ -40,3 +40,12 @@ wandb.log({"examples": wandb.Table(rows=[["Example", "Prediction", "Truth"]], co
 ```
 
 The default columns are `["Input", "Output", "Expected"]`. You can also call `table.add_row(col1, col2, col3)` with the same number of columns as the table was instantiated with. The maximum number of rows is 300.
+
+## Logging HTML
+
+```python
+wandb.log({"custom_file": wandb.Html(open("some.html"))})
+wandb.log({"custom_string": wandb.Html('<a href="https://mysite">Link</a>')})
+```
+
+Custom html can be logged at any key, this exposes an HTML panel on the run page. By default we inject default styles, you can disable default styles by passing `styles=False`.

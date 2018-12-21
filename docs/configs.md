@@ -7,9 +7,18 @@ sidebar_label: Hyperparameters
 
 Calling `wandb.init()` returns a **run** object. You can also access the **run** object anywhere in your code by importing wandb and calling `wandb.run` _(as long as wandb.init() has already been called)_.
 
-`wandb.init()` accepts a few keyword arguments.  You can set **project** or **entity**, and you can override the directory that **wandb** uses to write it's data to by specifying the **dir** argument.
+`wandb.init()` accepts a few keyword arguments:
 
-The config object can be used to save hyperparameters to wandb.  This is useful for visualizing experiments.
+- **config** - A dict like object to initialize config with.
+- **project** - The name of the project to post to.
+- **tags** - A list of strings to tag this run with.
+- **dir** - The path to a directory to write artifacts to. _default: ./wandb_
+- **entity** - The team to post to. _default: username or default team_
+- **job_type** - The type of job your logging i.e. eval, worker, ps etc. _default: training_
+- **group** - A string to group other runs by.
+- **reinit** - Whether to allow multiple calls to wandb.init in the same process. _default: False_
+
+The config object can be used to save hyperparameters to wandb. This is useful for visualizing experiments.
 
 ```python
 wandb.init()
@@ -27,7 +36,6 @@ wandb.init(config={"epochs": 4, "batch_size": 32})
 wandb.config.update({"epochs": 4, "batch_size": 32})
 ```
 
-
 ## Tensorflow Flags
 
 You can pass tensorflow flags into the config object.
@@ -44,7 +52,7 @@ wandb.config.update(flags.FLAGS)  # adds all of the tensorflow flags as config v
 
 ## Argparse Flags
 
-You can pass in an argparse 
+You can pass in an argparse
 
 ```python--keras
 wandb.init()
@@ -59,7 +67,7 @@ wandb.config.update(args) # adds all of the arguments as config variables
 
 ## File-Based Configs
 
-You can create a file called *config-defaults.yaml* and it will automatically
+You can create a file called _config-defaults.yaml_ and it will automatically
 be loaded into the config variable.
 
 ```yaml

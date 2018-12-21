@@ -43,7 +43,7 @@
       },
       "frameworks/keras": {
         "title": "Keras Support",
-        "sidebar_label": "Keras Support"
+        "sidebar_label": "Keras"
       },
       "frameworks/pytorch-example": {
         "title": "PyTorch Example",
@@ -51,7 +51,7 @@
       },
       "frameworks/pytorch": {
         "title": "PyTorch Support",
-        "sidebar_label": "PyTorch Support"
+        "sidebar_label": "PyTorch"
       },
       "frameworks/tensorflow-example": {
         "title": "TensorFlow Example",
@@ -59,7 +59,7 @@
       },
       "frameworks/tensorflow": {
         "title": "TensorFlow Support",
-        "sidebar_label": "TensorFlow Support"
+        "sidebar_label": "TensorFlow"
       },
       "grouping": {
         "title": "Grouping",
@@ -70,8 +70,8 @@
         "sidebar_label": "Histograms"
       },
       "integrations/api": {
-        "title": "W&B Data API Overview",
-        "sidebar_label": "Python Data API"
+        "title": "W&B Export API Overview",
+        "sidebar_label": "Python Export API"
       },
       "integrations/jupyter": {
         "title": "Jupyter",
@@ -84,6 +84,10 @@
       "integrations/sagemaker": {
         "title": "SageMaker",
         "sidebar_label": "SageMaker"
+      },
+      "integrations/tensorboard": {
+        "title": "Tensorboard Integration",
+        "sidebar_label": "Tensorboard"
       },
       "keras": {
         "title": "Keras Support",

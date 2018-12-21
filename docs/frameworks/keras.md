@@ -1,6 +1,6 @@
 ---
 title: Keras Support
-sidebar_label: Keras Support
+sidebar_label: Keras
 ---
 
 ## Overview

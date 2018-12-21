@@ -37,8 +37,7 @@ classifier = tf.estimator.DNNClassifier(
 )
 
 wandb.init()
-summary_op = tf.summary.merge_all()
-hook = WandbHook(summary_op)
+hook = WandbHook(steps_per_log=1000)
 
 # Define the training inputs
 train_input_fn = tf.estimator.inputs.numpy_input_fn(

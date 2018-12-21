@@ -116,6 +116,11 @@ code {
   color: #fff;
 }
 
+.mainContainer a {
+  text-decoration: underline;
+  color: #4183c4;
+}
+
 .icon {
   height: 30px;
   margin-bottom: 6px;
