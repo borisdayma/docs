@@ -15,8 +15,9 @@ Calling `wandb.init()` returns a **run** object. You can also access the **run**
 - **dir** - The path to a directory to write artifacts to. _default: ./wandb_
 - **entity** - The team to post to. _default: username or default team_
 - **job_type** - The type of job your logging i.e. eval, worker, ps etc. _default: training_
-- **group** - A string to group other runs by.
+- **group** - A string to group other runs by see [Grouping](grouping).
 - **reinit** - Whether to allow multiple calls to wandb.init in the same process. _default: False_
+- **resume** - If set to True auto resumes, can also be a unique string for manual resuming see [Resuming](resuming). \_default: False\*
 
 The config object can be used to save hyperparameters to wandb. This is useful for visualizing experiments.
 

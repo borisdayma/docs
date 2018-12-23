@@ -3,10 +3,33 @@ title: Resuming
 sidebar_label: Resuming
 ---
 
-By default **wandb** generates a unique 8 character name when a process is first run.  You can access this id in your script via `wandb.run.id` or the **WANDB_RUN_ID** environment variable.  If you need to resume failed runs you can store this id and set **WANDB_RESUME** equal to "must" and **WANDB_RUN_ID** to the stored id when you restart the process.
+You can have wandb automatically resume runs by passing `resume=True` to `wandb.init()`. If your process doesn't exit successfully, the next time you run it wandb will start logging from the last step. Below is a simple example in Keras.
 
-For simplicity we also allow you to set a globally unique string (per project) corresponding to a single run of your script.  It must be no longer than 64 characters. All non-word characters will be converted to dashes.  If you set **WANDB_RESUME** equal to "allow" you can always set **WANDB_RUN_ID** to this unique string and restarts of the process will automatically be handled.
+```python
+import keras
+import numpy as np
+import wandb
+from wandb.keras import WandbCallback
+wandb.init(project="preemptable", resume=True)
 
-_You can also specify **WANDB_RESUME** and **WANDB_RUN_ID** as command line arguments to `wandb run --id=run_id --resume=allow -- train.py`_
+if wandb.run.resumed:
+    # restore the best model
+    model = keras.models.load_model(wandb.restore("model-best.h5").name)
+else:
+    a = keras.layers.Input(shape=(32,))
+    b = keras.layers.Dense(10)(a)
+    model = keras.models.Model(input=a,output=b)
+
+model.compile("adam", loss="mse")
+model.fit(np.random.rand(100, 32), np.random.rand(100, 10),
+    # set the resumed epoch
+    initial_epoch=wandb.run.step, epochs=300,
+    # save the best model if it improved each epoch
+    callbacks=[WandbCallback(save_model=True, monitor="loss")])
+```
+
+Automatic resuming only works if the process is restarted on top of the same filesystem as the failed process. If you can't share a filesystem, we allow you to set a globally unique string (per project) corresponding to a single run of your script. It must be no longer than 64 characters. All non-word characters will be converted to dashes.
+
+If you set **WANDB_RESUME** equal to "allow" you can always set **WANDB_RUN_ID** to a unique string and restarts of the process will automatically be handled. You can also pass a unique string when calling init i.e. `wandb.init(resume="run-32")`. If you set **WANDB_RESUME** equal to "must", wandb will throw an error if a run does not exist instead of auto-creating.
 
 > WARNING: If multiple processes use the same run_id concurrently unexpected results will be recorded and rate limiting will occur.
