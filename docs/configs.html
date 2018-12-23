@@ -35,8 +35,9 @@
 <li><strong>dir</strong> - The path to a directory to write artifacts to. <em>default: ./wandb</em></li>
 <li><strong>entity</strong> - The team to post to. <em>default: username or default team</em></li>
 <li><strong>job_type</strong> - The type of job your logging i.e. eval, worker, ps etc. <em>default: training</em></li>
-<li><strong>group</strong> - A string to group other runs by.</li>
+<li><strong>group</strong> - A string to group other runs by see <a href="grouping">Grouping</a>.</li>
 <li><strong>reinit</strong> - Whether to allow multiple calls to wandb.init in the same process. <em>default: False</em></li>
+<li><strong>resume</strong> - If set to True auto resumes, can also be a unique string for manual resuming see <a href="resuming">Resuming</a>. _default: False*</li>
 </ul>
 <p>The config object can be used to save hyperparameters to wandb. This is useful for visualizing experiments.</p>
 <pre><code class="hljs css language-python">wandb.init()
