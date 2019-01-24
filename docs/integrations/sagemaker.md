@@ -28,4 +28,4 @@ wandb
 
 ### Example
 
-A complete example is available on [GitHub](https://github.com/wandb/examples/tree/master/pytorch-cifar10-sagemaker).
+A complete example is available on [GitHub](https://github.com/wandb/examples/tree/master/pytorch-cifar10-sagemaker) and you can read more on our [blog](https://www.wandb.com/blog/running-sweeps-with-sagemaker).

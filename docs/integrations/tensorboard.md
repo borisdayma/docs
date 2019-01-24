@@ -3,24 +3,23 @@ title: Tensorboard Integration
 sidebar_label: Tensorboard
 ---
 
-## Tensorboard
+## Tensorboard and TensorboardX
 
-WandB automatically detects tfevents files and syncs them to cloud storage as they're written to. You will see a "Tensorboard" tab on the run page if a run contains a tfevents file. Opening this tab will launch a tensorboard instance.
+W&B supports patching Tensorboard or [TensorboardX](https://github.com/lanpa/tensorboardX) to automatically log all summaries.
 
 ```python
-classifier = tf.estimator.DNNClassifier(
-    # ...
-    model_dir=wandb.run.dir
-)
+import wandb
+wandb.init(tensorboard=True)
 ```
 
-```python
+Under the hood the patch first checks to see if TensorboardX has been loaded and patches it if it has. You can pass `tensorboardX=False` to ensure vanilla Tensorboard is patched. By default we also sync the tfevents files and any \*.pbtxt files. This enables us to launch a Tensorboard instance on your behalf. You will see a "Tensorboard" tab on the run page, checkout our [blog post](https://www.wandb.com/blog/hosted-tensorboard). This behaviour can be disabled by passing `save=False` to `wandb.tensorboard.patch`
 
-with tf.Session() as sess:
-    # ...
-    writer = tf.summary.FileWriter(wandb.run.dir, sess.graph)
+```python
+import wandb
+wandb.init()
+wandb.tensorboard.patch(save=False, tensorboardX=True)
 ```
 
 ## Syncing Previous Tensorboard Runs
 
-If you have existing experiments you would like to import into wandb, you can run `wandb sync log_dir` where log_dir is a local directory containing a tfevents file.
+If you have existing experiments you would like to import into wandb, you can run `wandb sync log_dir` where log_dir is a local directory containing the tfevents files.

@@ -5,6 +5,10 @@
     "previous": "Previous",
     "tagline": "Documentation, Guides and Examples",
     "docs": {
+      "api": {
+        "title": "W&B Export API Overview",
+        "sidebar_label": "Python Export API"
+      },
       "artifacts": {
         "title": "Logging Artifacts",
         "sidebar_label": "Artifacts"

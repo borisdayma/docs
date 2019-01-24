@@ -5,16 +5,23 @@ sidebar_label: TensorFlow
 
 ## Overview
 
-WandB provides a hook for TensorFlow estimators. It will log all `tf.summary` values in the graph.
+If you're already using tensorboard it's really easy to integrate with wandb.
 
 ```python
-from wandb.tensorflow import WandbHook
+import tensorflow as tf
+import wandb
+wandb.init(config=tf.FLAGS, tensorboard=True)
+```
+
+If you want more control over what get's logged, WandB also provides a hook for TensorFlow estimators. It will log all `tf.summary` values in the graph.
+
+```python
 import tensorflow as tf
 import wandb
 
 wandb.init(config=tf.FLAGS)
 
-estimator.train(hooks=[WandbHook(steps_per_log=1000)])
+estimator.train(hooks=[wandb.tensorflow.WandbHook(steps_per_log=1000)])
 ```
 
 ## Logging manually
@@ -22,9 +29,9 @@ estimator.train(hooks=[WandbHook(steps_per_log=1000)])
 The simplest way to log metrics in Tensorflow is by logging `tf.summary` with the tensorflow logger:
 
 ```python
-from wandb.tensorflow import log
+import wandb
 
 with tf.Session() as sess:
     # ...
-    log(tf.summary.merge_all())
+    wandb.tensorflow.log(tf.summary.merge_all())
 ```
