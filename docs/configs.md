@@ -1,6 +1,6 @@
 ---
-title: Logging Hyperparameters and Other Inputs
-sidebar_label: Hyperparameters
+title: Logging Inputs
+sidebar_label: Logging Inputs
 ---
 
 ## Overview
@@ -82,3 +82,11 @@ batch_size:
 ```
 
 You can tell wandb to load different config files with the command line argument `--configs special-configs.yaml` which will load parameters from the file special-configs.yaml.
+
+## Change Run Display Name
+To change the run name that shows up in the web UI, add these two lines to your training script:
+
+```
+wandb.run.description = "your custom run name"; 
+wandb.run.save(); 
+```
