@@ -28,7 +28,7 @@ for batch_idx, (data, target) in enumerate(train_loader):
 
 ### Options
 
-By default the hook only logs gradients. If you want to log histograms of parameter values as well, you can specify `wandb.pytorch(model, log="all")`. Valid options for the log argument are: "gradients", "parameters", "all", or None.
+By default the hook only logs gradients. If you want to log histograms of parameter values as well, you can specify `wandb.watch(model, log="all")`. Valid options for the log argument are: "gradients", "parameters", "all", or None.
 
 ## Images
 
