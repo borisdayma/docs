@@ -5,7 +5,7 @@ sidebar_label: Getting Started
 
 ## Overview
 
-`wandb` is a tool that helps track and visualize machine learning model training at scale.
+`wandb` is a tool that helps track and visualize machine learning experiments.
 
 You can pronounce it w-and-b (as we originally intended), wand-b (because it's magic like a wand), or wan-db (because it saves things like a database).
 
@@ -18,8 +18,6 @@ Specifically, `wandb` helps with:
 
 ## Installation
 
-W&B is easy to install.
-
 ### Install the python library.
 
 ```shell
@@ -28,17 +26,11 @@ pip install wandb
 
 ### Make a free wandb account
 
-Sign up for a free account by running the following command in your terminal, or going to our [sign up page](https://app.wandb.ai/login?invited).
+Sign up for a free account by running the following command in your terminal, or going to our [sign up page](https://app.wandb.ai/login?signup=true).
 
 ```shell
-wandb signup
+wandb login
 ```
-
-> If you signed up via the link, or need to authenticate a new machine you can always run:
->
-> ```shell
-> wandb login
-> ```
 
 ### Near the top of your training script add the **wandb** initialization code:
 

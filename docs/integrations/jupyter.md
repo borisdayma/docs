@@ -9,6 +9,10 @@ sidebar_label: Jupyter
 
 You can call `wandb.log` as you would normally and metrics will be sent to the run created by `wandb.init()`. If you want to display live results in the notebook, you can decorate the cell that calls `wandb.log` with **%%wandb**. If you run this cell multiple times, data will be appended to the run.
 
+## Launching Jupyter
+
+Calling `wandb docker --jupyter` will launch a docker container, mount your code in it, ensure jupyter is installed and launch it on port 8888.
+
 ## Sharing Notebooks
 
 If your project is private, viewers of your notebook will be prompted to login to view results.

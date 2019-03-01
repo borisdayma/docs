@@ -30,8 +30,8 @@
         "sidebar_label": "Command Line Overview"
       },
       "configs": {
-        "title": "Logging Hyperparameters and Other Inputs",
-        "sidebar_label": "Hyperparameters"
+        "title": "Logging Inputs",
+        "sidebar_label": "Logging Inputs"
       },
       "examples": {
         "title": "Examples of W&B Projects",
@@ -76,6 +76,10 @@
       "integrations/api": {
         "title": "W&B Export API Overview",
         "sidebar_label": "Python Export API"
+      },
+      "integrations/docker": {
+        "title": "Docker",
+        "sidebar_label": "Docker"
       },
       "integrations/jupyter": {
         "title": "Jupyter",

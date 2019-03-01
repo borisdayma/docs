@@ -17,6 +17,7 @@
       "integrations/tensorboard",
       "integrations/sagemaker",
       "integrations/kubeflow",
+      "integrations/docker",
       "integrations/jupyter",
       "integrations/api"
     ],
