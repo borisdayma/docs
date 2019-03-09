@@ -34,17 +34,16 @@ Initialize `wandb` at the beginning of your script right after the imports.
 import wandb
 wandb.init(project="my-project")
 ```
-Now your script is set up to log to the project "my-project". If this project doesn't exist yet, we automatically create it for you. Learn more about additonal options you can pass into to `wandb.init` [here](configs).
+We automatically create the project for you if it doesn't exist. You can learn more about additonal options you can pass into to `wandb.init` [here](configs).
 
-### Save a few hyperparameters in run.config
+Next, save a few hyperparameters:
 
 ```python
 wandb.config.dropout = 0.2
 wandb.config.hidden_layer_size = 128
 ```
 
-### Log a few metrics
-
+Then log a few metrics:
 ```python
 def my_train_loop():
     for epoch in range(10):
@@ -52,21 +51,12 @@ def my_train_loop():
         wandb.log({'epoch': epoch, 'loss': loss})
 ```
 
-### Save a model _(optional)_
-
-Anything saved in the _run.dir_ directory will be uploaded to W&B and saved along with your run when it completes. This is especially convenient for saving the literal weights and biases.
-
+Anything saved in the `wandb.run.dir` directory will be uploaded to W&B and saved along with your run when it completes. This is especially convenient for saving the literal weights and biases:
 ```python
 model.save(os.path.join(wandb.run.dir, "mymodel.h5"))
 ```
 
-### Run your script normally from the commandline
-
-```shell
-python learn.py
-```
-
-Your terminal logs, metrics, and files will be synced to the cloud along with a record of your git state if you're running from a git repo.
+Great! Now run your script normally and we'll sync logs in a background process. Your terminal logs, metrics, and files will be synced to the cloud along with a record of your git state if you're running from a git repo.
 
 > If you're testing and want to disable wandb syncing, set **WANDB_MODE**=dryrun
 
