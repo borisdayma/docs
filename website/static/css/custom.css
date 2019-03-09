@@ -20,6 +20,11 @@
     max-width: 80%;
   }
 }
+@media only screen and (max-width: 1024px){
+  .reactNavSearchWrapper input#search_input_react {
+    background-color: #303030;
+  }
+}
 @media only screen and (max-width: 736px) {
   .homeContainer .homeWrapper {
     padding: 4em 10px;
@@ -36,38 +41,38 @@
 }
 
 @font-face {
-  font-family: "graphein";
-  src: url(../fonts/grapheinpro-book-webfont.woff) format("woff");
+  font-family: "Source Sans Pro";
+  src: url(../fonts/SourceSansPro-Regular.otf) format("otf");
 }
 
 @font-face {
-  font-family: "graphein";
-  src: url(../fonts/grapheinpro-bold-webfont.woff) format("woff");
+  font-family: "Source Sans Pro";
+  src: url(../fonts/SourceSansPro-Bold.otf) format("otf");
   font-weight: bold;
 }
 
 @font-face {
-  font-family: "graphein";
-  src: url(../fonts/grapheinpro-bolditalic-webfont.woff) format("woff");
+  font-family: "Source Sans Pro";
+  src: url(../fonts/SourceSansPro-BoldIt.otf) format("otf");
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "graphein";
-  src: url(../fonts/grapheinpro-italic-webfont.woff) format("woff");
+  font-family: "Source Sans Pro";
+  src: url(../fonts/SourceSansPro-It.otf) format("otf");
   font-style: italic;
 }
 
 @font-face {
-  font-family: "graphein";
-  src: url(../fonts/grapheinpro-light-webfont.woff) format("woff");
+  font-family: "Source Sans Pro";
+  src: url(../fonts/SourceSansPro-Light.otf) format("otf");
   font-weight: lighter;
 }
 
 @font-face {
-  font-family: "graphein";
-  src: url(../fonts/grapheinpro-lightitalic-webfont.woff) format("woff");
+  font-family: "Source Sans Pro";
+  src: url(../fonts/SourceSansPro-LightIt.otf) format("otf");
   font-weight: lighter;
   font-style: italic;
 }
@@ -75,7 +80,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "graphein";
+  font-family: "Source Sans Pro";
 }
 
 code {
@@ -174,6 +179,11 @@ h3 {
   .allCards {
     grid-template-columns: 1fr;
   }
+}
+
+/* Navigation Bar Styles */
+.fixedHeaderContainer {
+  background-color: #101010;
 }
 
 /* Hiding the white W&B in the nav bar*/
