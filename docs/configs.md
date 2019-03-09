@@ -17,7 +17,7 @@ Calling `wandb.init()` returns a **run** object. You can also access the **run**
 - **job_type** - The type of job your logging i.e. eval, worker, ps etc. _default: training_
 - **group** - A string to group other runs by see [Grouping](grouping).
 - **reinit** - Whether to allow multiple calls to wandb.init in the same process. _default: False_
-- **resume** - If set to True auto resumes, can also be a unique string for manual resuming see [Resuming](resuming). \_default: False\*
+- **resume** - If set to True auto resumes, can also be a unique string for manual resuming see [Resuming](resuming). _default: False_
 
 The config object can be used to save hyperparameters to wandb. This is useful for visualizing experiments.
 

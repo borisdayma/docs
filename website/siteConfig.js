@@ -67,8 +67,8 @@ const siteConfig = {
 
   /* colors for website */
   colors: {
-    primaryColor: "#080809",
-    secondaryColor: "#ECBB33"
+    primaryColor: "#202020",
+    secondaryColor: "#FFCC33"
   },
 
   /* custom fonts for website */
@@ -89,7 +89,7 @@ const siteConfig = {
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
-    theme: "default"
+    theme: "atelier-cave-light"
   },
 
   // Add custom scripts here that would be placed in <script> tags

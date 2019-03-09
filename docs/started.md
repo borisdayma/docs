@@ -3,14 +3,7 @@ title: Getting Started
 sidebar_label: Getting Started
 ---
 
-## Overview
-
-`wandb` is a tool that helps track and visualize machine learning experiments.
-
-You can pronounce it w-and-b (as we originally intended), wand-b (because it's magic like a wand), or wan-db (because it saves things like a database).
-
-Specifically, `wandb` helps with:
-
+Our tool `wandb` helps you track and visualize machine learning experiments. We have features for:
 1.  Tracking, saving and reproducing models.
 2.  Visualizing results across models.
 3.  Debugging and visualizing hardware performance issues.
@@ -18,7 +11,7 @@ Specifically, `wandb` helps with:
 
 ## Installation
 
-### Install the python library.
+### Install the python library
 
 ```shell
 pip install wandb
@@ -52,7 +45,6 @@ wandb.config.hidden_layer_size = 128
 ### Log a few metrics
 
 ```python
-
 def my_train_loop():
     for epoch in range(10):
         loss = 0 # change as appropriate :)

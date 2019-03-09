@@ -86,6 +86,38 @@ body {
 code {
   padding: 2px 4px;
   font-size: 85%;
+  color: #585260;
+  background-color: #f7f8fa;
+  /* font-family: "PT Mono"; */
+}
+
+.hljs {
+  background-color: #f6f9fa;
+}
+.hljs-number, .hljs-params {
+  color: #5ca9ec;
+}
+.hljs-title {
+  color: #40ce5c;
+}
+.hljs-keyword {
+  color: #00ceaf;
+}
+.hljs-string {
+  color: #1cbee3;
+}
+.hljs-attr {
+  /* color: #9a68df; */
+}
+.hljs-comment {
+  color: #8d8998;
+}
+.hljs-selector-class {
+  color: #be4678;
+}
+.mainContainer a {
+  text-decoration: none;
+  color: #3b95e4;
 }
 
 .fixedHeaderContainer header .headerTitleWithLogo {
@@ -103,8 +135,9 @@ code {
 
 .navigationSlider .slidingNav ul li a {
   line-height: 50px;
-  color: #888;
+  color: #999999;
   height: 50px;
+  font-weight: 400;
 }
 
 .sideNav {
@@ -117,76 +150,34 @@ code {
 .navigationSlider .slidingNav ul li a:hover,
 .navigationSlider .slidingNav ul li.siteNavItemActive a,
 .navigationSlider .slidingNav ul li.siteNavGroupActive a {
-  background: #888;
+  background: #404040;
   color: #fff;
-}
-
-.mainContainer a {
-  text-decoration: underline;
-  color: #4183c4;
-}
-
-.icon {
-  height: 30px;
-  margin-bottom: 6px;
-}
-
-.navPusher {
-  padding-top: 25px;
-}
-.homeContainer img {
-  max-width: 800px;
-}
-
-.cardDisplay {
-  border: 1px solid lightgray;
-  text-align: left;
-  background-color: white;
-  padding: 20px;
-  box-shadow: 2px 2px 2px lightgray;
-}
-
-.headers {
-  font-size: 20px;
-  margin-bottom: 4px;
-  font-weight: 300;
-  color: #55565b;
-}
-h1,
-h2,
-h3 {
-  color: #55565b;
-  margin-top: 5px;
-}
-
-.cardDisplay:hover {
-  box-shadow: 2px 2px 2px #ffe184;
-  border: 1px solid #e5ad00;
-}
-
-.allCards {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 10%;
-  margin: auto;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr;
-}
-
-@media only screen and (max-width: 810px) {
-  .allCards {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Navigation Bar Styles */
 .fixedHeaderContainer {
   background-color: #101010;
 }
+.navigationSlider .slidingNav ul {
+  background-color: #202020;
+}
 
 /* Hiding the white W&B in the nav bar*/
 .fixedHeaderContainer header h2 {
   display: none;
+}
+
+blockquote {
+  background-color: #fff9ed;
+  border-left: 8px solid #fff2cc;
+  border-radius: 4px;
+}
+
+li.navListItem.navListItemActive {
+  /* background-color: #fff4bb4d; */
+  /* border-left: 8px solid #fff9c2; */
+}
+
+.toc .toggleNav ul li.navListItemActive a {
+  color: #e8aa22;
 }
