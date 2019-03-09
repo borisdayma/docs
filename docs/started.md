@@ -4,36 +4,37 @@ sidebar_label: Getting Started
 ---
 
 Our tool `wandb` helps you track and visualize machine learning experiments. We have features for:
-1.  Tracking, saving and reproducing models.
-2.  Visualizing results across models.
-3.  Debugging and visualizing hardware performance issues.
-4.  Automating large-scale hyperparameter search.
+- Tracking, saving and reproducing models
+- Visualizing results across models
+- Debugging and visualizing hardware performance issues
+- Automating large-scale hyperparameter search
 
-## Installation
+In three steps we'll have you up and running.
+1. Install `wandb`
+2. Make a free account
+3. Add logging code
 
-### Install the python library
 
+## 1. Python Library
+Install our library in an environment using Python 3.
 ```shell
 pip install wandb
 ```
 
-### Make a free wandb account
+## 2. Account
 
-Sign up for a free account by running the following command in your terminal, or going to our [sign up page](https://app.wandb.ai/login?signup=true).
+Sign up for a free account by running `wandb login` in your terminal, or going to our [sign up page](https://app.wandb.ai/login?signup=true).
 
-```shell
-wandb login
-```
+## 3. Logging Code
+Add a few lines to your script to log hyperparameters and metrics.
 
-### Near the top of your training script add the **wandb** initialization code:
-
+Initialize `wandb` at the beginning of your script right after the imports.
 ```python
 # Inside my model training code
 import wandb
-wandb.init(project="my_project")
+wandb.init(project="my-project")
 ```
-
-We automatically create the project for you if it doesn't exist. You can learn more about additonal options you can pass into to `wandb.init` [here](configs).
+Now your script is set up to log to the project "my-project". If this project doesn't exist yet, we automatically create it for you. Learn more about additonal options you can pass into to `wandb.init` [here](configs).
 
 ### Save a few hyperparameters in run.config
 
