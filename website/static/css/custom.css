@@ -39,7 +39,7 @@
 
 @media only screen and (min-width: 1500px) {
 }
-
+/* 
 @font-face {
   font-family: "Source Sans Pro";
   src: url(../fonts/SourceSansPro-Regular.otf) format("otf");
@@ -75,7 +75,7 @@
   src: url(../fonts/SourceSansPro-LightIt.otf) format("otf");
   font-weight: lighter;
   font-style: italic;
-}
+} */
 
 body {
   margin: 0;

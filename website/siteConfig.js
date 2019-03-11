@@ -52,6 +52,10 @@ const siteConfig = {
     //  {blog: true, label: 'Blog'},
   ],
 
+  stylesheets: [
+    "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i"
+  ],
+
   // If you have users set above, you add it here:
   //users,
 
@@ -72,16 +76,12 @@ const siteConfig = {
   },
 
   /* custom fonts for website */
-  /*fonts: {
+  fonts: {
     myFont: [
-      "Times New Roman",
-      "Serif"
-    ],
-    myOtherFont: [
-      "-apple-system",
-      "system-ui"
+      "Source Sans Pro",
+      "Sans"
     ]
-  },*/
+  },
 
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright:
