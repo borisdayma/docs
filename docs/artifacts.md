@@ -33,13 +33,21 @@ wandb.log({"examples": [wandb.Audio(numpy_array, caption="Nice", sample_rate=32)
 
 The maximum number of audio clips that can be logged per step is 100.
 
-## Logging Tables
+## Logging Text / Tables
 
 ```python
-wandb.log({"examples": wandb.Table(rows=[["Example", "Prediction", "Truth"]], columns=["Source", "Guess", "Truth"])})
+# Method 1
+data = [["I love my phone", "1", "1"],["My phone sucks", "0", "-1"]]
+wandb.log({"examples": wandb.Table(rows=data, columns=["Text", "Predicted Label", "True Label"])})
+
+# Method 2
+table = wandb.Table(columns=["Text", "Predicted Label", "True Label"])})
+table.add_row(["I love my phone", "1", "1"])
+table.add_row(["My phone sucks", "0", "-1"])
+wandb.log({"examples": table})
 ```
 
-The default columns are `["Input", "Output", "Expected"]`. You can also call `table.add_row(col1, col2, col3)` with the same number of columns as the table was instantiated with. The maximum number of rows is 300.
+By default, the column headers are `["Input", "Output", "Expected"]`. The maximum number of rows is 300.
 
 ## Logging HTML
 
