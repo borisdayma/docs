@@ -77,10 +77,7 @@ const siteConfig = {
 
   /* custom fonts for website */
   fonts: {
-    myFont: [
-      "Source Sans Pro",
-      "Sans"
-    ]
+    myFont: ["Source Sans Pro", "Sans"]
   },
 
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
@@ -93,7 +90,11 @@ const siteConfig = {
   },
 
   // Add custom scripts here that would be placed in <script> tags
-  scripts: ["https://buttons.github.io/buttons.js", "/js/sidebar.js"],
+  scripts: [
+    "https://buttons.github.io/buttons.js",
+    "/js/sidebar.js",
+    "/js/segment.js"
+  ],
 
   /* On page navigation for the current documentation page */
   onPageNav: "separate",
