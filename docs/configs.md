@@ -9,15 +9,15 @@ Calling `wandb.init()` returns a **run** object. You can also access the **run**
 
 `wandb.init()` accepts a few keyword arguments:
 
-- **config** - A dict like object to initialize config with.
-- **project** - The name of the project to post to.
-- **tags** - A list of strings to tag this run with.
-- **dir** - The path to a directory to write artifacts to. _default: ./wandb_
-- **entity** - The team to post to. _default: username or default team_
-- **job_type** - The type of job your logging i.e. eval, worker, ps etc. _default: training_
-- **group** - A string to group other runs by see [Grouping](grouping).
-- **reinit** - Whether to allow multiple calls to wandb.init in the same process. _default: False_
-- **resume** - If set to True auto resumes, can also be a unique string for manual resuming see [Resuming](resuming). _default: False_
+- **config** &mdash; a dictionary-like object to set as initial config
+- **project** &mdash; the name of the project to which this run will belong
+- **tags** &mdash; a list of strings to associate with this run as tags
+- **dir** &mdash; the path to a directory where artifacts will be written (_default: ./wandb_)
+- **entity** &mdash; the team posting this run (_default: your username or your default team_)
+- **job_type** &mdash; the type of job you are logging, e.g. eval, worker, ps (_default: training_)
+- **group** &mdash; a string by which to group other runs; see [Grouping](grouping)
+- **reinit** &mdash; whether to allow multiple calls to wandb.init in the same process (_default: False_)
+- **resume** &mdash; if set to True, the run auto resumes; can also be a unique string for manual resuming; see [Resuming](resuming) (_default: False_)
 
 The config object can be used to save hyperparameters to wandb. This is useful for visualizing experiments.
 
@@ -33,7 +33,7 @@ You can initialize configs in batches
 
 ```python
 wandb.init(config={"epochs": 4, "batch_size": 32})
-#or
+# or
 wandb.config.update({"epochs": 4, "batch_size": 32})
 ```
 
@@ -87,6 +87,6 @@ You can tell wandb to load different config files with the command line argument
 To change the run name that shows up in the web UI, add these two lines to your training script:
 
 ```
-wandb.run.description = "your custom run name"; 
-wandb.run.save(); 
+wandb.run.description = "your custom run name"
+wandb.run.save()
 ```

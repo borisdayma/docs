@@ -4,9 +4,9 @@ sidebar_label: Getting Started
 ---
 
 Our tool `wandb` helps you track and visualize machine learning experiments. We have features for:
-- Tracking, saving and reproducing models
+- Tracking, saving, and reproducing models
 - Visualizing results across models
-- Debugging and visualizing hardware performance issues
+- Visualizing and debugging hardware performance issues
 - Automating large-scale hyperparameter search
 
 In three steps we'll have you up and running.
@@ -23,7 +23,7 @@ pip install wandb
 
 ## 2. Account
 
-Sign up for a free account by running `wandb login` in your terminal, or going to our [sign up page](https://app.wandb.ai/login?signup=true).
+Sign up for a free account by running `wandb login` in your terminal or by going to our [sign up page](https://app.wandb.ai/login?signup=true).
 
 ## 3. Logging Code
 Add a few lines to your script to log hyperparameters and metrics.
