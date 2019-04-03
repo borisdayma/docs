@@ -5,6 +5,10 @@
     "previous": "Previous",
     "tagline": "Documentation, Guides and Examples",
     "docs": {
+      "alerts/slack": {
+        "title": "Slack Alerts",
+        "sidebar_label": "Slack"
+      },
       "api": {
         "title": "W&B Export API Overview",
         "sidebar_label": "Python Export API"
@@ -156,6 +160,7 @@
       "Command Line": "Command Line",
       "Advanced Usage": "Advanced Usage",
       "Sweeps": "Sweeps",
+      "Alerts": "Alerts",
       "Resources": "Resources"
     }
   },

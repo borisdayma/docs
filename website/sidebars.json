@@ -30,6 +30,9 @@
       "limits"
     ],
     "Sweeps": ["sweep"],
+    "Alerts": [
+      "alerts/slack"
+    ],
     "Resources": ["faq"]
   }
 }
