@@ -9,6 +9,7 @@ Calling `wandb.init()` returns a **run** object. You can also access the **run**
 
 `wandb.init()` accepts a few keyword arguments:
 
+- **name** &mdash; A display name for this run
 - **config** &mdash; a dictionary-like object to set as initial config
 - **project** &mdash; the name of the project to which this run will belong
 - **tags** &mdash; a list of strings to associate with this run as tags
@@ -16,7 +17,9 @@ Calling `wandb.init()` returns a **run** object. You can also access the **run**
 - **entity** &mdash; the team posting this run (_default: your username or your default team_)
 - **job_type** &mdash; the type of job you are logging, e.g. eval, worker, ps (_default: training_)
 - **group** &mdash; a string by which to group other runs; see [Grouping](grouping)
+- **tensorboard** &mdash; A boolean indicating whether or not copy all tensorboard logs wandb. see [Tensorboard](integrations/tensorboard) (_default: False_)
 - **reinit** &mdash; whether to allow multiple calls to wandb.init in the same process (_default: False_)
+- **id** &mdash; A unique id for this run, **must be globally unique within a project**
 - **resume** &mdash; if set to True, the run auto resumes; can also be a unique string for manual resuming; see [Resuming](resuming) (_default: False_)
 
 The config object can be used to save hyperparameters to wandb. This is useful for visualizing experiments.
@@ -84,9 +87,19 @@ batch_size:
 You can tell wandb to load different config files with the command line argument `--configs special-configs.yaml` which will load parameters from the file special-configs.yaml.
 
 ## Change Run Display Name
+
 To change the run name that shows up in the web UI, add these two lines to your training script:
 
 ```
+<<<<<<< Updated upstream
 wandb.run.description = "your custom run name"
 wandb.run.save()
+```
+
+=======
+wandb.run.description = "your custom run name";
+wandb.run.save();
+
+```
+>>>>>>> Stashed changes
 ```
