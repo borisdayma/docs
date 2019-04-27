@@ -88,18 +88,10 @@ You can tell wandb to load different config files with the command line argument
 
 ## Change Run Display Name
 
-To change the run name that shows up in the web UI, add these two lines to your training script:
+To change the run name that shows up in the web UI, add this line to your training script:
 
 ```
-<<<<<<< Updated upstream
-wandb.run.description = "your custom run name"
-wandb.run.save()
+wandb.init(name="your custom run name")
 ```
 
-=======
-wandb.run.description = "your custom run name";
-wandb.run.save();
 
-```
->>>>>>> Stashed changes
-```
