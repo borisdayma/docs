@@ -33,9 +33,9 @@
         "title": "Command Line Overview",
         "sidebar_label": "Command Line Overview"
       },
-      "configs": {
-        "title": "Logging Inputs",
-        "sidebar_label": "Logging Inputs"
+      "config": {
+        "title": "wandb.config",
+        "sidebar_label": "wandb.config"
       },
       "examples": {
         "title": "Examples of W&B Projects",
@@ -77,6 +77,10 @@
         "title": "Histograms",
         "sidebar_label": "Histograms"
       },
+      "init": {
+        "title": "wandb.init",
+        "sidebar_label": "wandb.init"
+      },
       "integrations/api": {
         "title": "W&B Export API Overview",
         "sidebar_label": "Python Export API"
@@ -109,13 +113,17 @@
         "title": "Limits",
         "sidebar_label": "Limits"
       },
-      "logs": {
-        "title": "Logging Metrics",
-        "sidebar_label": "Metrics"
+      "log": {
+        "title": "wandb.log",
+        "sidebar_label": "wandb.log"
       },
       "matplotlib": {
         "title": "Plots",
         "sidebar_label": "Plots"
+      },
+      "restore": {
+        "title": "wandb.restore",
+        "sidebar_label": "wandb.restore"
       },
       "restoring": {
         "title": "Restoring State",
@@ -125,9 +133,9 @@
         "title": "Resuming",
         "sidebar_label": "Resuming"
       },
-      "saving": {
-        "title": "Saving Files",
-        "sidebar_label": "Saving Files"
+      "save": {
+        "title": "wandb.save",
+        "sidebar_label": "wandb.save"
       },
       "security": {
         "title": "Security",
@@ -153,14 +161,14 @@
     },
     "categories": {
       "Getting Started": "Getting Started",
-      "Examples": "Examples",
-      "Logging": "Logging",
+      "Python Library": "Python Library",
       "Framework Support": "Framework Support",
       "Integrations": "Integrations",
       "Command Line": "Command Line",
       "Advanced Usage": "Advanced Usage",
       "Sweeps": "Sweeps",
       "Alerts": "Alerts",
+      "Examples": "Examples",
       "Resources": "Resources"
     }
   },

@@ -3,6 +3,8 @@ title: Histograms
 sidebar_label: Histograms
 ---
 
+# Moved into logs
+
 ## Logging Histograms
 
 ```python

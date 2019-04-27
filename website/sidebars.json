@@ -1,13 +1,7 @@
 {
   "docs": {
     "Getting Started": ["started"],
-    "Examples": [
-      "frameworks/keras-example",
-      "frameworks/tensorflow-example",
-      "frameworks/pytorch-example",
-      "examples"
-    ],
-    "Logging": ["configs", "logs", "histograms", "artifacts", "saving"],
+    "Python Library": ["init", "config", "log", "save", "restore"],
     "Framework Support": [
       "frameworks/keras",
       "frameworks/tensorflow",
@@ -32,6 +26,12 @@
     "Sweeps": ["sweep"],
     "Alerts": [
       "alerts/slack"
+    ],
+    "Examples": [
+      "frameworks/keras-example",
+      "frameworks/tensorflow-example",
+      "frameworks/pytorch-example",
+      "examples"
     ],
     "Resources": ["faq"]
   }
