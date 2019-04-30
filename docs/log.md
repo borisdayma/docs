@@ -113,6 +113,32 @@ If a sequence is provided as the first argument, we will bin the histogram autom
 If histograms are in your summary they will appear as sparklines on the individual run pages. If they are in your history, we plot a heatmap of bins over time.
 
 
+### Logging 3D Objects
+```python
+wandb.log({"generated_samples":  
+           [wandb.Object3D(open("sample_0.obj")),
+            wandb.Object3D(open("sample_0.gltf")),
+            wandb.Object3D(open("sample_0.glb"))]})
+```
+
+Wandb supports logging 3D file types of in three different formats: glTF, glb, obj. The 3D files will be viewable on the run page upon completion of your run. 
+
+### Logging Point Clouds
+
+```python
+point_cloud = np.array([[0, 0, 0, COLOR...], ...])
+
+wandb.log({"point_cloud": wandb.Object3D(point_cloud)})
+```
+
+Numpy arrays logged via wandb.Object3D will be rendered as 3D point clouds.
+
+Supported numpy shapes include three different color schemes:
+ * [x y z],       ...] nx3
+ * [x y z c],     ...] nx4 where c is a category with supported range [1, 14](Useful for segmentation)
+ * [x y z r g b], ...] nx6 where is rgb is color
+
+
 ## Summary Metrics
 
 The summary statistics are used to track single metrics per model. If a summary metric is modified, only the updated state is saved. We automatically set summary to the last history row added unless you modify it manually. If you change a summary metric, we only persist the last value it was set to.
