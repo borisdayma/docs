@@ -134,9 +134,9 @@ wandb.log({"point_cloud": wandb.Object3D(point_cloud)})
 Numpy arrays logged via wandb.Object3D will be rendered as 3D point clouds.
 
 Supported numpy shapes include three different color schemes:
- * [x y z],       ...] nx3
- * [x y z c],     ...] nx4 where c is a category with supported range [1, 14](Useful for segmentation)
- * [x y z r g b], ...] nx6 where is rgb is color
+ * `[x y z],       ...]` nx3
+ * `[x y z c],     ...]` nx4 | c is a category with supported range [1, 14](Useful for segmentation)
+ * `[x y z r g b], ...]` nx6 | r,g,b are values in the range [0,255] for Red, Green, Blue color channels.
 
 
 ## Summary Metrics
