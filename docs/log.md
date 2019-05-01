@@ -116,9 +116,9 @@ If histograms are in your summary they will appear as sparklines on the individu
 ### Logging 3D Objects
 ```python
 wandb.log({"generated_samples":  
-           [wandb.Object3D(open("sample_0.obj")),
-            wandb.Object3D(open("sample_0.gltf")),
-            wandb.Object3D(open("sample_0.glb"))]})
+           [wandb.Object3D(open("sample.obj")),
+            wandb.Object3D(open("sample.gltf")),
+            wandb.Object3D(open("sample.glb"))]})
 ```
 
 Wandb supports logging 3D file types of in three different formats: glTF, glb, obj. The 3D files will be viewable on the run page upon completion of your run. 
