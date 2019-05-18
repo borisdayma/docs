@@ -12,7 +12,7 @@ import wandb
 wandb.init(tensorboard=True)
 ```
 
-Under the hood the patch first checks to see if TensorboardX has been loaded and patches it if it has. You can pass `tensorboardX=False` to ensure vanilla Tensorboard is patched. By default we also sync the tfevents files and any \*.pbtxt files. This enables us to launch a Tensorboard instance on your behalf. You will see a "Tensorboard" tab on the run page, checkout our [blog post](https://www.wandb.com/blog/hosted-tensorboard). This behaviour can be disabled by passing `save=False` to `wandb.tensorboard.patch`
+Under the hood the patch tries to guess which version of tensorboard to patch. We support tensorboard with all versions of tensorflow. If you're using tensorboard with another framework W&B supports tensorboard > 1.14 with PyTorch as well as TensorboardX. You can pass `tensorboardX=False` to ensure vanilla Tensorboard is patched, if you're using tensorboard > 1.14 with PyTorch you can pass `pytorch=True` to ensure it's patched. By default we also sync the tfevents files and any \*.pbtxt files. This enables us to launch a Tensorboard instance on your behalf. You will see a "Tensorboard" tab on the run page, checkout our [blog post](https://www.wandb.com/blog/hosted-tensorboard). This behaviour can be disabled by passing `save=False` to `wandb.tensorboard.patch`
 
 ```python
 import wandb
