@@ -56,4 +56,8 @@ wandb.log({"custom_file": wandb.Html(open("some.html"))})
 wandb.log({"custom_string": wandb.Html('<a href="https://mysite">Link</a>')})
 ```
 
-Custom html can be logged at any key, this exposes an HTML panel on the run page. By default we inject default styles, you can disable default styles by passing `styles=False`.
+Custom html can be logged at any key, this exposes an HTML panel on the run page. By default we inject default styles, you can disable default styles by passing `inject=False`.
+
+```python
+wandb.log({"raw_html": wandb.Html(open("some.html"), inject=False)})
+```
