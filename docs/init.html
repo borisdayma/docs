@@ -64,7 +64,7 @@
 <li><strong>entity</strong> — the team posting this run (<em>default: your username or your default team</em>)</li>
 <li><strong>job_type</strong> — the type of job you are logging, e.g. eval, worker, ps (<em>default: training</em>)</li>
 <li><strong>group</strong> — a string by which to group other runs; see <a href="grouping">Grouping</a></li>
-<li><strong>tensorboard</strong> — A boolean indicating whether or not copy all tensorboard logs wandb. see <a href="integrations/tensorboard">Tensorboard</a> (<em>default: False</em>)</li>
+<li><strong>sync_tensorboard</strong> — A boolean indicating whether or not copy all tensorboard logs wandb. see <a href="integrations/tensorboard">Tensorboard</a> (<em>default: False</em>)</li>
 <li><strong>reinit</strong> — whether to allow multiple calls to wandb.init in the same process (<em>default: False</em>)</li>
 <li><strong>id</strong> — A unique id for this run, <strong>must be globally unique within a project</strong></li>
 <li><strong>resume</strong> — if set to True, the run auto resumes; can also be a unique string for manual resuming; see <a href="resuming">Resuming</a> (<em>default: False</em>)</li>
