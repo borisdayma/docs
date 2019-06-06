@@ -9,25 +9,28 @@ Our tool `wandb` helps you track and visualize machine learning experiments. We 
 - Visualizing and debugging hardware performance issues
 - Automating large-scale hyperparameter search
 
-In three steps we'll have you up and running.
-1. Install `wandb`
-2. Make a free account
-3. Add logging code
+There are three steps to get started.
 
-
-## 1. Python Library
+## 1. Install the wandb Python Library
 Install our library in an environment using Python 3.
 ```shell
 pip install wandb
 ```
 
-## 2. Account
+## 2. Create a free wandb account
 
-Sign up for a free account by running `wandb login` in your terminal or by going to our [sign up page](https://app.wandb.ai/login?signup=true).
+Sign up for a free account in your shell.
 
-## 3. Logging Code
+```shell
+wandb login
+```
+
+Alternatively, you can go to our [sign up page](https://app.wandb.ai/login?signup=true).
+
+## 3. Modify your training script
 Add a few lines to your script to log hyperparameters and metrics.
 
+### 3a. Initialization
 Initialize `wandb` at the beginning of your script right after the imports.
 ```python
 # Inside my model training code
@@ -36,12 +39,18 @@ wandb.init(project="my-project")
 ```
 We automatically create the project for you if it doesn't exist. (See the [wandb.init](init) documentation for more initialization options.)
 
-Next, save a few hyperparameters:
+### 3b. Hyperparameters (optional)
+
+It's easy to save hyperparameters with the [wandb.config](config) object.
 
 ```python
 wandb.config.dropout = 0.2
 wandb.config.hidden_layer_size = 128
 ```
+
+### 3c. Logging (optional)
+
+Log metrics like loss or accuracy as your model trains or log more complicated things like histograms,  graphs or images with [wandb.log](log).
 
 Then log a few metrics:
 ```python
@@ -51,7 +60,9 @@ def my_train_loop():
         wandb.log({'epoch': epoch, 'loss': loss})
 ```
 
-Anything saved in the `wandb.run.dir` directory will be uploaded to W&B and saved along with your run when it completes. This is especially convenient for saving the literal weights and biases:
+### 3d. Saving files (optional)
+
+Anything saved in the `wandb.run.dir` directory will be uploaded to W&B and saved along with your run when it completes. This is especially convenient for saving the literal weights and biases in your model:
 ```python
 model.save(os.path.join(wandb.run.dir, "mymodel.h5"))
 ```

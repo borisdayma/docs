@@ -21,7 +21,7 @@ In a Jupyter Notebook, calling `wandb.init()` will create a new run.
 - **entity** &mdash; the team posting this run (_default: your username or your default team_)
 - **job_type** &mdash; the type of job you are logging, e.g. eval, worker, ps (_default: training_)
 - **group** &mdash; a string by which to group other runs; see [Grouping](grouping)
-- **tensorboard** &mdash; A boolean indicating whether or not copy all tensorboard logs wandb. see [Tensorboard](integrations/tensorboard) (_default: False_)
+- **sync_tensorboard** &mdash; A boolean indicating whether or not copy all tensorboard logs wandb. see [Tensorboard](integrations/tensorboard) (_default: False_)
 - **reinit** &mdash; whether to allow multiple calls to wandb.init in the same process (_default: False_)
 - **id** &mdash; A unique id for this run, **must be globally unique within a project**
 - **resume** &mdash; if set to True, the run auto resumes; can also be a unique string for manual resuming; see [Resuming](resuming) (_default: False_)
