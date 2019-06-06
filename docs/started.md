@@ -34,7 +34,7 @@ Initialize `wandb` at the beginning of your script right after the imports.
 import wandb
 wandb.init(project="my-project")
 ```
-We automatically create the project for you if it doesn't exist. You can learn more about additonal options you can pass into to `wandb.init` [here](configs).
+We automatically create the project for you if it doesn't exist. (See the [wandb.init](init) documentation for more initialization options.)
 
 Next, save a few hyperparameters:
 
