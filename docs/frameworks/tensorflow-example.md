@@ -13,7 +13,7 @@ You can find this example on [GitHub](https://github.com/wandb/examples/blob/mas
 import tensorflow as tf
 import numpy as np
 import wandb
-wandb.init(project="mnist", tensorboard=True)
+wandb.init(project="mnist", sync_tensorboard=True)
 wandb.config.batch_size = 256
 
 mnist = tf.contrib.learn.datasets.load_dataset("mnist")
