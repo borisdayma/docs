@@ -3,11 +3,7 @@ title: Getting Started
 sidebar_label: Getting Started
 ---
 
-Our tool `wandb` helps you track and visualize machine learning experiments. We have features for:
-- Tracking, saving, and reproducing models
-- Visualizing results across models
-- Visualizing and debugging hardware performance issues
-- Automating large-scale hyperparameter search
+Our tool `wandb` helps you track and visualize machine learning experiments.  Getting set up should take less than five minutes.  If you have any questions or run into any problems, please let us know!  You can ask questions in our [gitter forum](https://gitter.im/wandb-app/community) and we should be able to help you out right away.
 
 There are three steps to get started.
 
