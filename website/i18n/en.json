@@ -146,7 +146,7 @@
         "sidebar_label": "Getting Started"
       },
       "sweep": {
-        "title": "Sweeps (invite only)",
+        "title": "Sweeps",
         "sidebar_label": "Hyperparameter Sweeps"
       },
       "tensorflow-estimator-example": {
