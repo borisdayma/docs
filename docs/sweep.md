@@ -1,5 +1,5 @@
 ---
-title: Sweeps (invite only)
+title: Sweeps
 sidebar_label: Hyperparameter Sweeps
 ---
 
