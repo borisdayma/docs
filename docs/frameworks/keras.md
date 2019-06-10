@@ -18,6 +18,10 @@ model.fit(X_train, y_train,  validation_data=(X_test, y_test),
           callbacks=[WandbCallback()])
 ```
 
+### Example Code
+
+See [Keras Examples](keras-example) or check out our [Example GitHub Repo](https://github.com/wandb/examples) for complete example code.
+
 ### Options
 
 Keras `WandbCallback()` class supports a number of options:

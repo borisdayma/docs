@@ -26,6 +26,10 @@ for batch_idx, (data, target) in enumerate(train_loader):
 
 > Gradients, metrics and the graph won't be logged until `wandb.log` is called after a forward and backward pass.
 
+### Example Code
+
+See [PyTorch Examples](pytorch-example) or check out our [Example GitHub Repo](https://github.com/wandb/examples) for complete example code.
+
 ### Options
 
 By default the hook only logs gradients. If you want to log histograms of parameter values as well, you can specify `wandb.watch(model, log="all")`. Valid options for the log argument are: "gradients", "parameters", "all", or None.

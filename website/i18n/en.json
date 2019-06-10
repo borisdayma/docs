@@ -45,6 +45,10 @@
         "title": "Frequently Asked Questions",
         "sidebar_label": "FAQ"
       },
+      "frameworks/fastai": {
+        "title": "Fast.ai Support",
+        "sidebar_label": "Fast.ai"
+      },
       "frameworks/keras-example": {
         "title": "Keras Example",
         "sidebar_label": "Keras"

@@ -10,8 +10,12 @@ If you're already using tensorboard it's really easy to integrate with wandb.
 ```python
 import tensorflow as tf
 import wandb
-wandb.init(config=tf.FLAGS, tensorboard=True)
+wandb.init(config=tf.FLAGS, sync_tensorboard=True)
 ```
+
+### Example Code
+
+See [TensorFlow Examples](tensorflow-example) or check out our [Example GitHub Repo](https://github.com/wandb/examples) for complete example code.
 
 ## Custom Metrics
 
