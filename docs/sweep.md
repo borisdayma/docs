@@ -5,7 +5,7 @@ sidebar_label: Hyperparameter Sweeps
 
 ## Overview
 
-W&B supports running hyperparameter sweeps to find the best set of hyperparameters efficiently.  If you would like to try our solution, email contact@wandb.com.
+W&B supports running hyperparameter sweeps to find the best set of hyperparameters efficiently.
 
 ### Getting Started
 
@@ -82,7 +82,8 @@ appear to have lower performance than successful training runs.
 
 Values | Meaning
 ------- | -------
-envelope | Use an envelope method for early termination/
+hyperband | Use the hyperband method (https://arxiv.org/abs/1603.06560)
+envelope | Use an envelope method for early termination
 Not Specified | Don't do early termination.
 
 ### Parameters
