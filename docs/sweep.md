@@ -96,10 +96,10 @@ distribution: (distribution) | A distribution from the distrbution table below. 
 min: (float) max: (float) | Continuous values between min and max
 min: (int) max: (int) | Integers between min and max
 values: [(float), (float), ...] | Discrete values
-value: | A constant
-mu: | Mean for normal or lognormal distributions
-sigma: | Standard deviation for normal or lognormal distributions
-q: | Quantization parameter for quantized distributions
+value: (float) | A constant
+mu: (float) | Mean for normal or lognormal distributions
+sigma: (float) | Standard deviation for normal or lognormal distributions
+q: (float) | Quantization parameter for quantized distributions
 
 ### Distributions
 
