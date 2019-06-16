@@ -51,7 +51,7 @@
               }
             });
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Sweeps</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h2>
-<p>W&amp;B supports running hyperparameter sweeps to find the best set of hyperparameters efficiently.  If you would like to try our solution, email <a href="mailto:contact@wandb.com">contact@wandb.com</a>.</p>
+<p>W&amp;B supports running hyperparameter sweeps to find the best set of hyperparameters efficiently.</p>
 <h3><a class="anchor" aria-hidden="true" id="getting-started"></a><a href="#getting-started" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getting Started</h3>
 <p>To run a parameter sweep:</p>
 <ol>
@@ -124,7 +124,8 @@ appear to have lower performance than successful training runs.</p>
 <tr><th>Values</th><th>Meaning</th></tr>
 </thead>
 <tbody>
-<tr><td>envelope</td><td>Use an envelope method for early termination/</td></tr>
+<tr><td>hyperband</td><td>Use the hyperband method (<a href="https://arxiv.org/abs/1603.06560">https://arxiv.org/abs/1603.06560</a>)</td></tr>
+<tr><td>envelope</td><td>Use an envelope method for early termination</td></tr>
 <tr><td>Not Specified</td><td>Don't do early termination.</td></tr>
 </tbody>
 </table>
@@ -135,13 +136,13 @@ appear to have lower performance than successful training runs.</p>
 <tr><th>Values</th><th>Meaning</th></tr>
 </thead>
 <tbody>
-<tr><td>distribution:</td><td>A distribution from the distrbution table below.  If not specified, the sweep will set to uniform is max and min are set, categorical if values are set and constant if value is set.</td></tr>
+<tr><td>distribution: (distribution)</td><td>A distribution from the distrbution table below.  If not specified, the sweep will set to uniform is max and min are set, categorical if values are set and constant if value is set.</td></tr>
 <tr><td>min: (float) max: (float)</td><td>Continuous values between min and max</td></tr>
 <tr><td>min: (int) max: (int)</td><td>Integers between min and max</td></tr>
-<tr><td>values: [a, b, c]</td><td>Discrete values</td></tr>
+<tr><td>values: [(float), (float), ...]</td><td>Discrete values</td></tr>
 <tr><td>value:</td><td>A constant</td></tr>
 <tr><td>mu:</td><td>Mean for normal or lognormal distributions</td></tr>
-<tr><td>sigma:</td><td>Std Dev for normal or lognormal distributions</td></tr>
+<tr><td>sigma:</td><td>Standard deviation for normal or lognormal distributions</td></tr>
 <tr><td>q:</td><td>Quantization parameter for quantized distributions</td></tr>
 </tbody>
 </table>
