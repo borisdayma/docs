@@ -89,6 +89,10 @@ const siteConfig = {
     theme: "atelier-cave-light"
   },
 
+  scrollToTop: true,
+
+  editUrl: 'https://github.com/wandb/docs/edit/master/docs/',
+
   // Add custom scripts here that would be placed in <script> tags
   scripts: [
     "https://buttons.github.io/buttons.js",

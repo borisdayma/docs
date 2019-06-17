@@ -3,6 +3,7 @@
 This repository contains the documentation for W&B, it uses the excellent [Docusaurus](https://docusaurus.io) for site generation.
 
 ## Conventions
+
 - **wandb** - refers to the CLI or library
 - **W&B** - refers to the website or service
 - **Weights & Biases** - refers to the company
@@ -20,7 +21,11 @@ cd website
 yarn start
 ```
 
-You should be able to refresh your browser to see basic changes.  If you change the config or yaml front matter, you will need to manually restart for now.
+You should be able to refresh your browser to see basic changes. If you change the config or yaml front matter, you will need to manually restart for now.
+
+## Contributing
+
+To contribution to the documentation edit the corresponding file in the 'docs' folder and submit your changes in a pull request. The Weights & Biases team will merge your change and deploy the new documentation. Thank you for contributing!
 
 ## Deployment
 
