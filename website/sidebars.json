@@ -5,7 +5,8 @@
     "Framework Support": [
       "frameworks/keras",
       "frameworks/tensorflow",
-      "frameworks/pytorch"
+      "frameworks/pytorch",
+      "frameworks/fastai"
     ],
     "Integrations": [
       "integrations/tensorboard",

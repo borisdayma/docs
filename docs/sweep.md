@@ -1,11 +1,11 @@
 ---
-title: Sweeps (invite only)
+title: Sweeps
 sidebar_label: Hyperparameter Sweeps
 ---
 
 ## Overview
 
-W&B supports running hyperparameter sweeps to find the best set of hyperparameters efficiently.  If you would like to try our solution, email contact@wandb.com.
+W&B supports running hyperparameter sweeps to find the best set of hyperparameters efficiently.
 
 ### Getting Started
 
@@ -82,7 +82,8 @@ appear to have lower performance than successful training runs.
 
 Values | Meaning
 ------- | -------
-envelope | Use an envelope method for early termination/
+hyperband | Use the hyperband method (https://arxiv.org/abs/1603.06560)
+envelope | Use an envelope method for early termination
 Not Specified | Don't do early termination.
 
 ### Parameters
@@ -91,14 +92,14 @@ The parameters dictionary specifies the ranges of configuration parameters.
 
 Values | Meaning
 ------ | -------
-distribution: | A distribution from the distrbution table below.  If not specified, the sweep will set to uniform is max and min are set, categorical if values are set and constant if value is set.
+distribution: (distribution) | A distribution from the distrbution table below.  If not specified, the sweep will set to uniform is max and min are set, categorical if values are set and constant if value is set.
 min: (float) max: (float) | Continuous values between min and max
 min: (int) max: (int) | Integers between min and max
-values: [a, b, c] | Discrete values
-value: | A constant
-mu: | Mean for normal or lognormal distributions
-sigma: | Std Dev for normal or lognormal distributions
-q: | Quantization parameter for quantized distributions
+values: [(float), (float), ...] | Discrete values
+value: (float) | A constant
+mu: (float) | Mean for normal or lognormal distributions
+sigma: (float) | Standard deviation for normal or lognormal distributions
+q: (float) | Quantization parameter for quantized distributions
 
 ### Distributions
 

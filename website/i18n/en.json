@@ -45,6 +45,10 @@
         "title": "Frequently Asked Questions",
         "sidebar_label": "FAQ"
       },
+      "frameworks/fastai": {
+        "title": "Fast.ai Support",
+        "sidebar_label": "Fast.ai"
+      },
       "frameworks/keras-example": {
         "title": "Keras Example",
         "sidebar_label": "Keras"
@@ -146,7 +150,7 @@
         "sidebar_label": "Getting Started"
       },
       "sweep": {
-        "title": "Sweeps (invite only)",
+        "title": "Sweeps",
         "sidebar_label": "Hyperparameter Sweeps"
       },
       "tensorflow-estimator-example": {
