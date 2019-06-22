@@ -69,6 +69,12 @@ parameters:
     value: 30
 ```
 
+## Detailed Examples
+[Multi-GPU Hyperparameter Sweeps in Three Simple Steps](https://www.wandb.com/articles/multi-gpu-sweeps)
+
+
+## API
+
 ### Method
 Values | Meaning
 ------ | -------
