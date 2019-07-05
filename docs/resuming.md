@@ -32,4 +32,10 @@ Automatic resuming only works if the process is restarted on top of the same fil
 
 If you set **WANDB_RESUME** equal to "allow" you can always set **WANDB_RUN_ID** to a unique string and restarts of the process will automatically be handled. You can also pass a unique string when calling init i.e. `wandb.init(resume="run-32")`. If you set **WANDB_RESUME** equal to "must", wandb will throw an error if a run does not exist instead of auto-creating.
 
+| Method | Syntax| Never Resume (default) | Always Resume | Resume specifying run id | Resume from same directory |
+| --- | --- | --- | --- | --- | --- |
+| command line | wandb run --resume= | "never" | "must" | "allow" (Requires WANDB_RUN_ID=RUN_ID) | (not available) |
+| environment | WANDB_RESUME= | "never" | "must" | "allow" (Requires WANDB_RUN_ID=RUN_ID)| (not available) |
+| init | wandb.init(resume=) |           | (not available)  | resume=RUN_ID | resume=True |
+
 > WARNING: If multiple processes use the same run_id concurrently unexpected results will be recorded and rate limiting will occur.
