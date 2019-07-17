@@ -19,7 +19,7 @@ import wandb
 from wandb.keras import WandbCallback
 
 wandb.init() # Initializes wandb
-config = wandb.config # Copnfig is a variable that holds and saves hyperparameters and inputs
+config = wandb.config # Config is a variable that holds and saves hyperparameters and inputs
 config.dropout = 0.2
 config.hidden_layer_size = 128
 config.layer_1_size  = 16
