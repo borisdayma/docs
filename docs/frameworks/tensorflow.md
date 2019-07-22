@@ -10,7 +10,7 @@ If you're already using tensorboard it's really easy to integrate with wandb.
 ```python
 import tensorflow as tf
 import wandb
-wandb.init(config=tf.FLAGS, sync_tensorboard=True)
+wandb.init(config=tf.flags.FLAGS, sync_tensorboard=True)
 ```
 
 ### Example Code
