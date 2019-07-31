@@ -57,3 +57,4 @@ Check out our [Example GitHub Repo](https://github.com/wandb/examples) for compl
 | input_type       | None      | "images" or None. Used to display sample predictions.                                                    |
 | validation_data  | None      | data used for sample predictions if input_type is set.                                                   |
 | predictions      | 36        | number of predictions to make if input_type is set and validation_data is None.                          |
+| seed             | 12345     | initialize random generator for sample predictions if input_type is set and validation_data is None.     |
