@@ -46,6 +46,7 @@ const siteConfig = {
     //  {doc: 'gallery', label: 'Gallery'},
 
     { doc: "started", label: "Docs" },
+    { doc: "enterprise/about", label: "Enterprise" },
     { href: "https://wandb.com", label: "Company" },
     { href: "https://app.wandb.ai", label: "Login" },
     { search: true }
@@ -53,7 +54,7 @@ const siteConfig = {
   ],
 
   stylesheets: [
-    "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i"
+    "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700"
   ],
 
   // If you have users set above, you add it here:
