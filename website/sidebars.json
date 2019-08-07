@@ -35,5 +35,10 @@
       "examples"
     ],
     "Resources": ["faq"]
+  },
+  "enterprise": {
+    "W&B Enterprise": [
+      "enterprise/about"
+    ]
   }
 }

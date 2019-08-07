@@ -37,6 +37,10 @@
         "title": "wandb.config",
         "sidebar_label": "wandb.config"
       },
+      "enterprise/about": {
+        "title": "W&B Enterprise",
+        "sidebar_label": "About"
+      },
       "examples": {
         "title": "Examples of W&B Projects",
         "sidebar_label": "More Projects"
@@ -72,6 +76,10 @@
       "frameworks/tensorflow": {
         "title": "TensorFlow Support",
         "sidebar_label": "TensorFlow"
+      },
+      "frameworks/xgboost": {
+        "title": "XGBoost support",
+        "sidebar_label": "XGBoost"
       },
       "grouping": {
         "title": "Grouping",
@@ -160,6 +168,7 @@
     },
     "links": {
       "Docs": "Docs",
+      "Enterprise": "Enterprise",
       "Company": "Company",
       "Login": "Login"
     },
@@ -173,7 +182,8 @@
       "Sweeps": "Sweeps",
       "Alerts": "Alerts",
       "Examples": "Examples",
-      "Resources": "Resources"
+      "Resources": "Resources",
+      "W&B Enterprise": "W&B Enterprise"
     }
   },
   "pages-strings": {
