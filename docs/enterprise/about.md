@@ -6,7 +6,7 @@ sidebar_label: About
 W&B Enterprise is the on-premises version of [Weights & Biases](app.wandb.ai). It makes collaborative experiment tracking possible for enterprise machine learning teams, offering confidence that all training data and metadata are protected within your organization's network.
 
 <p style="text-align: center;">
-  <a href="https://www.wandb.com/demo-request" style="background: #444; color: white !important; display: inline-block; padding: 1rem; margin: 1rem auto; font-size: 24px;">
+  <a href="https://www.wandb.com/demo" style="background: #444; color: white !important; display: inline-block; padding: 1rem; margin: 1rem auto; font-size: 24px;">
     Request a demo to try out W&B Enterprise
   </a>
 </p>
