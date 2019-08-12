@@ -38,4 +38,4 @@ Keras `WandbCallback()` class supports a number of options:
 | data_type         | None     | the type of data we're saving, currently only "image" is supported                                                                                |
 | labels            | None     | only used if data_type is specified, list of labels to convert numeric output to if you are building classifier. (supports binary classification) |
 | predictions       | 36       | the number of predictions to make if data_type is specified. Max is 100.                                                                          |
-| generator         | None     | if using data agmentation and data_type you can specify a generator to make predictions with.                                                     |
+| generator         | None     | if using data augmentation and data_type you can specify a generator to make predictions with.                                                     |
