@@ -127,7 +127,7 @@ def main():
     model = Net().to(device)
     optimizer = optim.SGD(model.parameters(), lr=args.lr, momentum=args.momentum)
 
-    # This magic line lets us save ther pytorch model and track all of the gradients and optionally parameters
+    # This magic line lets us save the pytorch model and track all of the gradients and optionally parameters
     wandb.watch(model)
 
     for epoch in range(1, args.epochs + 1):
