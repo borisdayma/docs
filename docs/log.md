@@ -78,7 +78,7 @@ On the W&B runs page, you should edit your graphs and choose "Image Viewer" to s
 wandb.log({"video": wandb.Video(numpy_array_or_path_to_video, fps=4, format="gif")})
 ```
 
-If a numpy array is supplied we assume the dimensions are: time,channels,width,height. By default we create a 4 fps gif image (ffmpeg and the moviepy python library is required when passing numpy objects). Supported formats are "gif", "mp4", "webm", and "ogg". If you pass a string to `wandb.Video` we assert the file exists and is a supported format before uploading to wandb. Passing a BytesIO object will create a tempfile and with the specified format as the extension and upload.
+If a numpy array is supplied we assume the dimensions are: time,channels,width,height. By default we create a 4 fps gif image (ffmpeg and the moviepy python library is required when passing numpy objects). Supported formats are "gif", "mp4", "webm", and "ogg". If you pass a string to `wandb.Video` we assert the file exists and is a supported format before uploading to wandb. Passing a BytesIO object will create a tempfile with the specified format as the extension.
 
 On the W&B runs page, you will see your videos in the Media section.
 
