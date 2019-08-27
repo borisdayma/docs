@@ -38,7 +38,8 @@
   },
   "enterprise": {
     "W&B Enterprise": [
-      "enterprise/about"
+      "enterprise/about",
+      "enterprise/usage"
     ]
   }
 }

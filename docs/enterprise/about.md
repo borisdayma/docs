@@ -36,6 +36,18 @@ We support the following environments:
 | VMware                | OVF           |
 | Vagrant               | Vagrant Box   |
 
+### Server Requirements
+
+The W&B Enterprise server requires a virtual machine with at least 4 cores and 16GB memory.
+
 ## Enterprise Cloud
 
 Our W&B Enterprise Cloud offering consists of a fully scalable W&B cluster provisioned on your AWS or GCP environment.
+
+### Cloud Requirements
+
+W&B Enterprise Cloud requires the following cloud resources in your account. The size can be configured for your level of usage.
+
+* A Kubernetes cluster (EKS or GKE)
+* A SQL database (RDS or Google Cloud SQL)
+* A columnar store (HBase or BigTable)
