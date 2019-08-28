@@ -161,9 +161,21 @@
         "title": "Getting Started",
         "sidebar_label": "Getting Started"
       },
-      "sweep": {
-        "title": "Sweeps",
-        "sidebar_label": "Hyperparameter Sweeps"
+      "sweeps/configuration": {
+        "title": "Sweeps Configuration",
+        "sidebar_label": "Configuration"
+      },
+      "sweeps/local": {
+        "title": "Sweeps Local Controller",
+        "sidebar_label": "Local Controller"
+      },
+      "sweeps/overview": {
+        "title": "Sweeps Overview",
+        "sidebar_label": "Sweeps Overview"
+      },
+      "sweeps/python": {
+        "title": "Sweeps Jupyter/Python API",
+        "sidebar_label": "Jupyter/Python API"
       },
       "tensorflow-estimator-example": {
         "title": "TensorFlow Estimator Example",
