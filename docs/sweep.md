@@ -16,7 +16,7 @@ To run a parameter sweep:
 ranges and the search strategy.
 3. Initialize your sweep, which gives you a SWEEP_ID and a url to track all of
 your runs.
-4. Run wandb agent, which will get a set of parameter names and arguments from the
+4. Run one or more wandb agents, which will get a set of parameter names and arguments from the
 wandb server and then run your training script with the parameters as arguments.  You can
 run as many agents as you like.
 

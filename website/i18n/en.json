@@ -41,6 +41,10 @@
         "title": "W&B Enterprise",
         "sidebar_label": "About"
       },
+      "enterprise/usage": {
+        "title": "Using W&B Enterprise",
+        "sidebar_label": "Usage"
+      },
       "examples": {
         "title": "Examples of W&B Projects",
         "sidebar_label": "More Projects"
