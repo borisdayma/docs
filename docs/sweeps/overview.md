@@ -9,7 +9,7 @@ W&B supports running hyperparameter sweeps to find the best set of hyperparamete
 
 ### Initialize the project
 
-Create your project in the in the wandb CLI or W&B UI:
+Create your project with the wandb CLI or W&B UI:
 ```shell
 wandb init # If you haven't already initialized your project
 ```
