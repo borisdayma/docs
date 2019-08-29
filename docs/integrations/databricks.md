@@ -23,7 +23,7 @@ pip install databricks-cli
 # Generate a token from databricks UI
 databricks configure --token
 
-# Create a scope with one of the two commands (depending if you have security features enabled on databrick):
+# Create a scope with one of the two commands (depending if you have security features enabled on databricks):
 # with security add-on
 databricks secrets create-scope --scope wandb
 # without security add-on
