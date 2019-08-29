@@ -3,22 +3,22 @@ title: Sweeps Overview
 sidebar_label: Sweeps Overview
 ---
 
-W&B supports running hyperparameter sweeps to find the best set of hyperparameters efficiently.
+Use W&B to manage hyperparameter sweeps. These are useful for efficiently finding the best version of your model.
 
 ## Getting Started
 
 ### Initialize the project
 
-Create your project in the in the wandb CLI or W&B UI:
+In your project repo, initialize your project from the command line:
 ```shell
-wandb init # If you haven't already initialized your project
+wandb init
 ```
 
 ### Create a sweep configuration
 
 The sweep configuration file specifies your training script, parameter ranges, search strategy and stopping criteria.
 
-Sample config file:
+Here's an example config file:
 ```yaml
 program: train.py
 method: bayes
@@ -35,8 +35,7 @@ parameters:
 
 ### Initialize the sweep
 
-which gives you a SWEEP_ID and a url to track all of
-your runs.
+Run this from the command line to get a SWEEP_ID and a URL to track all your runs.
 
 ```shell
 wandb sweep sweep.yaml # prints out SWEEP_ID.
@@ -44,10 +43,7 @@ wandb sweep sweep.yaml # prints out SWEEP_ID.
 
 ### Run agent(s)
 
-Run one or more wandb agents with the SWEEP_ID.
-
-Agents will request parameters from the parameter server and launch your training script.
-
+Run one or more wandb agents with the SWEEP_ID. Agents will request parameters from the parameter server and launch your training script.
 
 ```shell
 wandb agent SWEEP_ID
