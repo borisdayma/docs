@@ -5,37 +5,37 @@
     "previous": "Previous",
     "tagline": "Documentation, Guides and Examples",
     "docs": {
+      "advanced/automated": {
+        "title": "Running in Automated Environments",
+        "sidebar_label": "Environment Variables"
+      },
+      "advanced/grouping": {
+        "title": "Grouping",
+        "sidebar_label": "Grouping"
+      },
+      "advanced/limits": {
+        "title": "Limits",
+        "sidebar_label": "Limits"
+      },
+      "advanced/resuming": {
+        "title": "Resuming",
+        "sidebar_label": "Resuming"
+      },
+      "advanced/security": {
+        "title": "Security",
+        "sidebar_label": "Security"
+      },
       "alerts/slack": {
         "title": "Slack Alerts",
         "sidebar_label": "Slack"
       },
-      "api": {
-        "title": "W&B Export API Overview",
-        "sidebar_label": "Python Export API"
-      },
-      "artifacts": {
-        "title": "Logging Artifacts",
-        "sidebar_label": "Artifacts"
-      },
-      "audio": {
-        "title": "Audio",
-        "sidebar_label": "Audio"
-      },
-      "automated": {
-        "title": "Running in Automated Environments",
-        "sidebar_label": "Environment Variables"
-      },
-      "board": {
-        "title": "Docusaurus",
-        "sidebar_label": "The Board"
-      },
-      "cli": {
+      "cli/overview": {
         "title": "Command Line Overview",
         "sidebar_label": "Command Line Overview"
       },
-      "config": {
-        "title": "wandb.config",
-        "sidebar_label": "wandb.config"
+      "cli/restoring": {
+        "title": "Restoring State",
+        "sidebar_label": "Restoring State"
       },
       "enterprise/about": {
         "title": "W&B Enterprise",
@@ -73,6 +73,10 @@
         "title": "PyTorch Support",
         "sidebar_label": "PyTorch"
       },
+      "frameworks/tensorflow-estimator-example": {
+        "title": "TensorFlow Estimator Example",
+        "sidebar_label": "TensorFlow Estimator"
+      },
       "frameworks/tensorflow-example": {
         "title": "TensorFlow Example",
         "sidebar_label": "TensorFlow"
@@ -85,17 +89,9 @@
         "title": "XGBoost support",
         "sidebar_label": "XGBoost"
       },
-      "grouping": {
-        "title": "Grouping",
-        "sidebar_label": "Grouping"
-      },
-      "histograms": {
-        "title": "Histograms",
-        "sidebar_label": "Histograms"
-      },
-      "init": {
-        "title": "wandb.init",
-        "sidebar_label": "wandb.init"
+      "getting-started": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting Started"
       },
       "integrations/api": {
         "title": "W&B Export API Overview",
@@ -121,46 +117,6 @@
         "title": "Tensorboard Integration",
         "sidebar_label": "Tensorboard"
       },
-      "keras": {
-        "title": "Keras Support",
-        "sidebar_label": "Keras Support"
-      },
-      "limits": {
-        "title": "Limits",
-        "sidebar_label": "Limits"
-      },
-      "log": {
-        "title": "wandb.log",
-        "sidebar_label": "wandb.log"
-      },
-      "matplotlib": {
-        "title": "Plots",
-        "sidebar_label": "Plots"
-      },
-      "restore": {
-        "title": "wandb.restore",
-        "sidebar_label": "wandb.restore"
-      },
-      "restoring": {
-        "title": "Restoring State",
-        "sidebar_label": "Restoring State"
-      },
-      "resuming": {
-        "title": "Resuming",
-        "sidebar_label": "Resuming"
-      },
-      "save": {
-        "title": "wandb.save",
-        "sidebar_label": "wandb.save"
-      },
-      "security": {
-        "title": "Security",
-        "sidebar_label": "Security"
-      },
-      "started": {
-        "title": "Getting Started",
-        "sidebar_label": "Getting Started"
-      },
       "sweeps/configuration": {
         "title": "Sweeps Configuration",
         "sidebar_label": "Configuration"
@@ -177,9 +133,25 @@
         "title": "Sweeps Jupyter/Python API",
         "sidebar_label": "Jupyter/Python API"
       },
-      "tensorflow-estimator-example": {
-        "title": "TensorFlow Estimator Example",
-        "sidebar_label": "TensorFlow Estimator"
+      "wandb/config": {
+        "title": "wandb.config",
+        "sidebar_label": "wandb.config"
+      },
+      "wandb/init": {
+        "title": "wandb.init",
+        "sidebar_label": "wandb.init"
+      },
+      "wandb/log": {
+        "title": "wandb.log",
+        "sidebar_label": "wandb.log"
+      },
+      "wandb/restore": {
+        "title": "wandb.restore",
+        "sidebar_label": "wandb.restore"
+      },
+      "wandb/save": {
+        "title": "wandb.save",
+        "sidebar_label": "wandb.save"
       }
     },
     "links": {

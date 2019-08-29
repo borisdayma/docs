@@ -11,7 +11,7 @@ class Footer extends React.Component {
   docUrl(doc, language) {
     const baseUrl = this.props.config.baseUrl;
     //TODO: no language
-    return baseUrl + 'docs/' + doc;
+    return baseUrl + doc;
   }
 
   pageUrl(doc, language) {
@@ -36,13 +36,13 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5>Docs</h5>
-            <a href={this.docUrl('started.html', this.props.language)}>
+            <a href={this.docUrl('getting-started', this.props.language)}>
               Getting Started 
             </a>
-            <a href={this.docUrl('init.html', this.props.language)}>
+            <a href={this.docUrl('wandb/init', this.props.language)}>
               Python API Reference
             </a>
-            <a href={this.docUrl('examples.html', this.props.language)}>
+            <a href={this.docUrl('examples', this.props.language)}>
               Example Projects
             </a>
           </div>

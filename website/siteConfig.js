@@ -32,6 +32,8 @@ const siteConfig = {
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
   baseUrl: "/",
+  docsUrl: "",
+  cleanUrl: true,
   cname: "https://docs.wandb.com",
 
   // Used for publishing and more
@@ -45,7 +47,7 @@ const siteConfig = {
   headerLinks: [
     //  {doc: 'gallery', label: 'Gallery'},
 
-    { doc: "started", label: "Docs" },
+    { doc: "getting-started", label: "Docs" },
     { doc: "enterprise/about", label: "Enterprise" },
     { href: "https://wandb.com", label: "Company" },
     { href: "https://app.wandb.ai", label: "Login" },
