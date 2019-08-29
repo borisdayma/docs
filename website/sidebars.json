@@ -24,7 +24,12 @@
       "security",
       "limits"
     ],
-    "Sweeps": ["sweep"],
+    "Sweeps": [
+      "sweeps/overview",
+      "sweeps/configuration",
+      "sweeps/local",
+      "sweeps/python"
+    ],
     "Alerts": [
       "alerts/slack"
     ],

@@ -1,96 +1,103 @@
 ---
-title: Sweeps
-sidebar_label: Hyperparameter Sweeps
+title: Sweeps Configuration
+sidebar_label: Configuration
 ---
 
-## Overview
+## Configuration fields
 
-W&B supports running hyperparameter sweeps to find the best set of hyperparameters efficiently.
+Top-level key | Meaning
+----- | -------
+name | The name of the sweep displayed in the W&B UI
+description | Text description of the sweep
+program | Training script (Required)
+metric | Specify the metric to optimize (used by some search straties and stopping criteria)
+method | Specify the [search strategy](#search-strategy) (Required)
+early_terminate | Specify the [stopping critera](#stopping-criteria)
+parameters | Specify [parameters](#parameters) bounds to search (Required)
 
-### Getting Started
+### Metric
 
-To run a parameter sweep:
+Specify the metric to optimize.  This metric should be logged by your training script.
 
-1. Initialize your project to use wandb in the cloud.
-2. Create a sweep.yaml file specified below, which specified your training script, your parameter
-ranges and the search strategy.
-3. Initialize your sweep, which gives you a SWEEP_ID and a url to track all of
-your runs.
-4. Run one or more wandb agents, which will get a set of parameter names and arguments from the
-wandb server and then run your training script with the parameters as arguments.  You can
-run as many agents as you like.
+`metric` sub-key | Meaning
+--- | ---
+name | Name of the metric to optimize
+goal | `minimize` or `maximize` (Default is `minimize`)
 
-### Start a search from your projects root directory
+<details>
+<summary>Examples</summary>
 
-```shell
-wandb init # If you haven't already initialized your project
-wandb sweep sweep.yaml # returns SWEEP_ID.
-```
-
-### Start an agent
-
-```shell
-wandb agent SWEEP_ID
-```
-
-
-## Sweep.yaml File
-> Example sweep.yaml
-
+#### Maximize:
 ```yaml
-description: random sweep for my little cnn
-
-# Training script to run
-program: cnn.py  
-
-# Method can be bayes, random, grid
-method: bayes
-
-# Metric to optimize
 metric:
   name: val_loss
-  goal: minimize
-
-# Should we early terminate runs
-early_terminate:
-  type: envelope
-
-# Parameters to search over
-parameters:
-  learning-rate:
-    min: 0.001
-    max: 0.1
-  optimizer:
-    values: ["adam", "sgd"]
-  dropout:
-    min: 0.01
-    max: 0.5
-  epochs:
-    value: 30
+  goal: maximize
 ```
 
-## Detailed Examples
-[Multi-GPU Hyperparameter Sweeps in Three Simple Steps](https://www.wandb.com/articles/multi-gpu-sweeps)
+#### Minimize
 
+```yaml
+metric:
+  name: val_loss
+```
+</details>
 
-## API
+### Search Strategy
 
-### Method
-Values | Meaning
+Specify the search strategy with the `method` key in the sweep configuration file.
+
+`method` | Meaning
 ------ | -------
 grid | Grid Search - Will iterate over all possible sets of values in parameters.
 random | Random Search - Will choose random sets of values
-bayes | Bayesian Optimization - Uses a gaussian process to model the function and then chooses parameters to optimize probability of improvement
+bayes | Bayesian Optimization - Uses a gaussian process to model the function and then chooses parameters to optimize probability of improvement (Requires [metric](#metric) key to be specified)
 
-### Early Terminate
+<details>
+<summary>Examples</summary>
+
+#### Random search:
+```yaml
+method: random
+```
+
+#### Grid search:
+```yaml
+method: grid
+```
+
+#### Bayes search:
+```yaml
+method: bayes
+metric:
+  name: val_loss
+  goal: minimize
+```
+</details>
+
+### Stopping Criteria
+
 Early termination is a strategy to speed up hyperparameter search by killing off runs that
 appear to have lower performance than successful training runs.
 
-Values | Meaning
+`early_terminate` sub-key | Meaning
+--- | ---
+type | specify the stopping algorithm
+
+
+The stopping algorithms supported are:
+`type` | Meaning
 ------- | -------
 hyperband | Use the hyperband method (https://arxiv.org/abs/1603.06560)
 envelope | Use an envelope method for early termination
-Not Specified | Don't do early termination.
+
+<details>
+<summary>Examples</summary>
+
+```yaml
+early_terminate:
+  type: envelope
+```
+</details>
 
 ### Parameters
 
@@ -107,7 +114,7 @@ mu: (float) | Mean for normal or lognormal distributions
 sigma: (float) | Standard deviation for normal or lognormal distributions
 q: (float) | Quantization parameter for quantized distributions
 
-### Distributions
+#### Distributions
 
 Supported distributions
 
@@ -124,3 +131,14 @@ normal | Normal distribution.  Value is chosen from normal distribution.  Can se
 q_normal | Quantized normal distribution.  Returns  round(X / q) * q where X is normal.  Q defaults to 1.
 log_normal | Log normal distribution. Value is chosen from log normal distribution.  Can set mean mu (default 0) and std dev sigma (default 1).
 q_log_normal | Quantized log normal distribution.  Returns  round(X / q) * q where X is log_normal.  Q defaults to 1.
+
+<details>
+<summary>Examples</summary>
+
+```yaml
+parameters:
+  my-parameter:
+    min: 1
+    max: 20
+```
+</details>
