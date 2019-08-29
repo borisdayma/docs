@@ -97,6 +97,10 @@
         "title": "W&B Export API Overview",
         "sidebar_label": "Python Export API"
       },
+      "integrations/databricks": {
+        "title": "Databricks",
+        "sidebar_label": "Databricks"
+      },
       "integrations/docker": {
         "title": "Docker",
         "sidebar_label": "Docker"

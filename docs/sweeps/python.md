@@ -42,7 +42,7 @@ def train():
         wandb.log({"dog": parameter1, "cat": x})
         time.sleep(1)
 
-wandb.agent(sweep_id, function=train, entity="username", project="project_name")
+wandb.agent(sweep_id, function=train)
 ```
 
 ## Run a local controller
