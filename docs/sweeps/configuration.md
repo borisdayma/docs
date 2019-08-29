@@ -3,19 +3,19 @@ title: Sweeps Configuration
 sidebar_label: Configuration
 ---
 
-## Configuration fields
+Use these configuration fields to customize your sweep.
 
 Top-level key | Meaning
 ----- | -------
 name | The name of the sweep displayed in the W&B UI
 description | Text description of the sweep
-program | Training script (Required)
+program | Training script (required)
 metric | Specify the metric to optimize (used by some search straties and stopping criteria)
-method | Specify the [search strategy](#search-strategy) (Required)
+method | Specify the [search strategy](#search-strategy) (required)
 early_terminate | Specify the [stopping critera](#stopping-criteria)
-parameters | Specify [parameters](#parameters) bounds to search (Required)
+parameters | Specify [parameters](#parameters) bounds to search (required)
 
-### Metric
+## Metric
 
 Specify the metric to optimize.  This metric should be logged by your training script.
 
@@ -42,15 +42,15 @@ metric:
 ```
 </details>
 
-### Search Strategy
+## Search Strategy
 
 Specify the search strategy with the `method` key in the sweep configuration file.
 
 `method` | Meaning
 ------ | -------
-grid | Grid Search - Will iterate over all possible sets of values in parameters.
-random | Random Search - Will choose random sets of values
-bayes | Bayesian Optimization - Uses a gaussian process to model the function and then chooses parameters to optimize probability of improvement (Requires [metric](#metric) key to be specified)
+grid | Grid Search iterates over all possible sets of parameter values.
+random | Random Search chooses random sets of values.
+bayes | Bayesian Optimization uses a gaussian process to model the function and then chooses parameters to optimize probability of improvement. This strategy requires a [metric](#metric) key to be specified.
 
 <details>
 <summary>Examples</summary>
@@ -74,20 +74,19 @@ metric:
 ```
 </details>
 
-### Stopping Criteria
+## Stopping Criteria
 
-Early termination is a strategy to speed up hyperparameter search by killing off runs that
-appear to have lower performance than successful training runs.
+Early Termination speeds up hyperparameter search by killing off pooly performing runs.
 
 `early_terminate` sub-key | Meaning
 --- | ---
 type | specify the stopping algorithm
 
 
-The stopping algorithms supported are:
+We support these stopping algorithms:
 `type` | Meaning
 ------- | -------
-hyperband | Use the hyperband method (https://arxiv.org/abs/1603.06560)
+hyperband | Use the [hyperband method](https://arxiv.org/abs/1603.06560)
 envelope | Use an envelope method for early termination
 
 <details>
@@ -99,7 +98,7 @@ early_terminate:
 ```
 </details>
 
-### Parameters
+## Parameters
 
 The parameters dictionary specifies the ranges of configuration parameters.
 
@@ -114,9 +113,7 @@ mu: (float) | Mean for normal or lognormal distributions
 sigma: (float) | Standard deviation for normal or lognormal distributions
 q: (float) | Quantization parameter for quantized distributions
 
-#### Distributions
-
-Supported distributions
+## Distributions
 
 Name | Meaning
 ---- | -------

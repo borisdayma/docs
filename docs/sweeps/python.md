@@ -3,9 +3,8 @@ title: Sweeps Jupyter/Python API
 sidebar_label: Jupyter/Python API
 ---
 
-The Sweeps API allows the user to configure and execute sweeps from python environments (including jupyter notebooks).
-
-This API is currently experimental, please contact <jeff@wandb.com> with feedback.
+## Beta Feature
+Use the Sweeps API to configure and execute sweeps from Python environments, including Jupyter notebooks. This API is currently experimental; please contact <jeff@wandb.com> with feedback.
 
 ## Initialize a sweep
 
@@ -25,7 +24,7 @@ sweep_config = {
 sweep_id = wandb.sweep(sweep_config)
 ```
 
-## Running an agent
+## Run an agent
 
 When running an agent from python, the agent runs a specified function instead of using the `program` key from the 
 sweep configuration file.
@@ -46,7 +45,7 @@ def train():
 wandb.agent(sweep_id, function=train, entity="username", project="project_name")
 ```
 
-## Running a local controller
+## Run a local controller
 
 If you want to develop your own parameter search algorithms you can run your controller from python.
 
@@ -66,7 +65,7 @@ while not sweep.done():
     time.sleep(5)
 ```
 
-Or even more control over the parameters being served
+Or even more control over the parameters being served:
 ```python
 import wandb
 sweep = wandb.controller(sweep_id)

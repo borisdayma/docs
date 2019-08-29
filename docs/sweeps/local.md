@@ -10,7 +10,7 @@ stopped.
 The local controller feature allows the user to run search and stopping algorithms locally.  The local controller gives the user the ability to inspect
 and instrument the code in order to debug issues as well as develop new features which can be incorporated into the cloud service.
 
-## Local Controller Configuration
+## Local controller configuration
 
 To enable the local controller, add the following to the sweep configuration file:
 
