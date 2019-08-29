@@ -1,7 +1,15 @@
 {
   "docs": {
-    "Getting Started": ["started"],
-    "Python Library": ["init", "config", "log", "save", "restore"],
+    "Getting Started": [
+      "getting-started"
+    ],
+    "Python Library": [
+      "wandb/init",
+      "wandb/config",
+      "wandb/log",
+      "wandb/save",
+      "wandb/restore"
+    ],
     "Framework Support": [
       "frameworks/keras",
       "frameworks/tensorflow",
@@ -16,13 +24,16 @@
       "integrations/jupyter",
       "integrations/api"
     ],
-    "Command Line": ["cli", "restoring"],
+    "Command Line": [
+      "cli/overview",
+      "cli/restoring"
+    ],
     "Advanced Usage": [
-      "automated",
-      "grouping",
-      "resuming",
-      "security",
-      "limits"
+      "advanced/automated",
+      "advanced/grouping",
+      "advanced/resuming",
+      "advanced/security",
+      "advanced/limits"
     ],
     "Sweeps": [
       "sweeps/overview",
@@ -39,7 +50,9 @@
       "frameworks/pytorch-example",
       "examples"
     ],
-    "Resources": ["faq"]
+    "Resources": [
+      "faq"
+    ]
   },
   "enterprise": {
     "W&B Enterprise": [
