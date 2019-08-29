@@ -57,6 +57,7 @@
   "enterprise": {
     "W&B Enterprise": [
       "enterprise/about",
+      "enterprise/config",
       "enterprise/usage"
     ]
   }

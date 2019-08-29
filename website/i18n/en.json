@@ -41,6 +41,10 @@
         "title": "W&B Enterprise",
         "sidebar_label": "About"
       },
+      "enterprise/config": {
+        "title": "Configuring W&B Enterprise",
+        "sidebar_label": "Configuration"
+      },
       "enterprise/usage": {
         "title": "Using W&B Enterprise",
         "sidebar_label": "Usage"
