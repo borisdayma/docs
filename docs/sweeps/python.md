@@ -45,6 +45,9 @@ def train():
 wandb.agent(sweep_id, function=train)
 ```
 
+Example:
+[Run in colab](https://colab.research.google.com/github/wandb/examples/blob/master/sweeps-python/notebook.ipynb)
+
 ## Run a local controller
 
 If you want to develop your own parameter search algorithms you can run your controller from python.
