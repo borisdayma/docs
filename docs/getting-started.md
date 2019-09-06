@@ -33,11 +33,11 @@ Initialize `wandb` at the beginning of your script right after the imports.
 import wandb
 wandb.init(project="my-project")
 ```
-We automatically create the project for you if it doesn't exist. (See the [wandb.init](init) documentation for more initialization options.)
+We automatically create the project for you if it doesn't exist. (See the [wandb.init](wandb/init) documentation for more initialization options.)
 
 ### 3b. Hyperparameters (optional)
 
-It's easy to save hyperparameters with the [wandb.config](config) object.
+It's easy to save hyperparameters with the [wandb.config](wandb/config) object.
 
 ```python
 wandb.config.dropout = 0.2
@@ -46,7 +46,7 @@ wandb.config.hidden_layer_size = 128
 
 ### 3c. Logging (optional)
 
-Log metrics like loss or accuracy as your model trains or log more complicated things like histograms,  graphs or images with [wandb.log](log).
+Log metrics like loss or accuracy as your model trains or log more complicated things like histograms,  graphs or images with [wandb.log](wandb/log).
 
 Then log a few metrics:
 ```python
